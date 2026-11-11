@@ -1,0 +1,255 @@
+{
+  "fileKey": "D7NNqJrQzDyFViSuVjaCfX",
+  "version": "1.2",
+  "date": "2026-11-11",
+  "screenCount": 14,
+  "screens": [
+    {
+      "id": "1:9",
+      "name": "v1.2 · 내 아티스트",
+      "types": {
+        "FRAME": 41,
+        "TEXT": 40,
+        "VECTOR": 2,
+        "INSTANCE": 16,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "2003:228",
+      "name": "v1.2 · 아티스트 검색",
+      "types": {
+        "FRAME": 26,
+        "TEXT": 30,
+        "VECTOR": 4,
+        "INSTANCE": 12,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "2026:588",
+      "name": "v1.2 · 등록되지 않은 이름 직접 검색",
+      "types": {
+        "FRAME": 14,
+        "TEXT": 11,
+        "VECTOR": 3,
+        "INSTANCE": 2,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "2026:623",
+      "name": "v1.2 · 아티스트 공연 · 직접 검색 저장",
+      "types": {
+        "FRAME": 27,
+        "TEXT": 26,
+        "VECTOR": 3,
+        "INSTANCE": 10,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "2026:702",
+      "name": "v1.2 · 다크모드 · 아티스트 공연",
+      "types": {
+        "FRAME": 26,
+        "TEXT": 25,
+        "VECTOR": 2,
+        "INSTANCE": 9,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "6:729",
+      "name": "v1.2 · 예정 공연 전체 목록",
+      "types": {
+        "FRAME": 14,
+        "TEXT": 20,
+        "VECTOR": 1,
+        "INSTANCE": 6,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "6:876",
+      "name": "v1.2 · 이전 공연 이력 전체 목록",
+      "types": {
+        "FRAME": 17,
+        "TEXT": 29,
+        "VECTOR": 1,
+        "INSTANCE": 10,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "6:848",
+      "name": "v1.2 · 예정 공연 1건 상태",
+      "types": {
+        "FRAME": 11,
+        "TEXT": 14,
+        "VECTOR": 1,
+        "INSTANCE": 4,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "2011:20",
+      "name": "v1.2 · 지역별 공연 · 위치 선택",
+      "types": {
+        "FRAME": 43,
+        "TEXT": 40,
+        "VECTOR": 53,
+        "INSTANCE": 7,
+        "GROUP": 1,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "2026:1071",
+      "name": "v1.2 · 지역 공연 · 목록 하단 · 더 보기",
+      "types": {
+        "FRAME": 20,
+        "TEXT": 25,
+        "VECTOR": 1,
+        "INSTANCE": 10,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "2026:1136",
+      "name": "v1.2 · 초기 아티스트 선택",
+      "types": {
+        "FRAME": 13,
+        "TEXT": 22,
+        "RECTANGLE": 1,
+        "VECTOR": 2,
+        "INSTANCE": 9
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": [
+        {
+          "id": "2026:1143",
+          "name": "Icon/logo",
+          "type": "RECTANGLE",
+          "width": 64,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "id": "2026:1186",
+      "name": "v1.2 · 선호 아티스트 편집",
+      "types": {
+        "FRAME": 16,
+        "TEXT": 24,
+        "VECTOR": 3,
+        "INSTANCE": 10,
+        "RECTANGLE": 2
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    },
+    {
+      "id": "2026:1244",
+      "name": "v1.2 · 공연 상세",
+      "types": {
+        "FRAME": 20,
+        "TEXT": 22,
+        "VECTOR": 2,
+        "INSTANCE": 5,
+        "RECTANGLE": 3
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": [
+        {
+          "id": "2030:446",
+          "name": "Concert poster · KOPIS PF301829",
+          "type": "RECTANGLE",
+          "width": 372,
+          "height": 360
+        }
+      ]
+    },
+    {
+      "id": "2026:1302",
+      "name": "v1.2 · 검색명 편집",
+      "types": {
+        "FRAME": 35,
+        "TEXT": 31,
+        "VECTOR": 3,
+        "INSTANCE": 12,
+        "RECTANGLE": 4
+      },
+      "fonts": [
+        "Roboto",
+        "Noto Sans KR"
+      ],
+      "images": []
+    }
+  ],
+  "notes": [
+    "Editable text, components and vector icons; no flattened UI screenshots.",
+    "Roboto and Noto Sans KR match the Android font families.",
+    "The only raster content assets are the logo and the API-provided concert poster.",
+    "All 14 screens were visually reviewed; corrections applied to credits, layout, dark icons and poster."
+  ]
+}

@@ -1,0 +1,780 @@
+[
+  {
+    "id": "ive",
+    "name": "아이브",
+    "english": "IVE",
+    "initials": "IV",
+    "kind": "그룹",
+    "aliases": [
+      "아이브",
+      "IVE"
+    ],
+    "members": [
+      "안유진",
+      "장원영",
+      "가을",
+      "레이",
+      "리즈",
+      "이서"
+    ],
+    "tours": [
+      "SHOW WHAT I HAVE",
+      "IVE SCOUT"
+    ],
+    "source": "https://ive-official.jp/mob/pageShw.php?site=DIVE&cd=profile"
+  },
+  {
+    "id": "nmixx",
+    "name": "NMIXX",
+    "english": "엔믹스",
+    "initials": "NM",
+    "kind": "그룹",
+    "aliases": [
+      "NMIXX",
+      "엔믹스"
+    ],
+    "members": [
+      "릴리|박진|LILY",
+      "해원|오해원|HAEWON",
+      "설윤|설윤아|SULLYOON",
+      "배이|배진솔|BAE",
+      "지우|김지우|JIWOO",
+      "규진|장규진|KYUJIN"
+    ],
+    "tours": [],
+    "source": "https://nmixx.jype.com/profile"
+  },
+  {
+    "id": "iu",
+    "name": "아이유",
+    "english": "IU",
+    "initials": "IU",
+    "kind": "솔로",
+    "aliases": [
+      "아이유",
+      "IU",
+      "이지은"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.edam-ent.com/kor/sub03/sub03_0301.php"
+  },
+  {
+    "id": "day6",
+    "name": "DAY6",
+    "english": "데이식스",
+    "initials": "D6",
+    "kind": "밴드",
+    "aliases": [
+      "DAY6",
+      "데이식스"
+    ],
+    "members": [
+      "성진|박성진",
+      "영케이|강영현|Young K",
+      "원필|김원필",
+      "도운|윤도운"
+    ],
+    "tours": [
+      "FOREVER YOUNG"
+    ],
+    "source": "https://day6.jype.com/profile"
+  },
+  {
+    "id": "aespa",
+    "name": "aespa",
+    "english": "에스파",
+    "initials": "ae",
+    "kind": "그룹",
+    "aliases": [
+      "aespa",
+      "에스파"
+    ],
+    "members": [
+      "카리나",
+      "윈터",
+      "지젤",
+      "닝닝"
+    ],
+    "tours": [
+      "SYNK"
+    ],
+    "source": "https://www.smtown.com/artist"
+  },
+  {
+    "id": "bts",
+    "name": "BTS",
+    "english": "방탄소년단",
+    "initials": "BTS",
+    "kind": "그룹",
+    "aliases": [
+      "BTS",
+      "방탄소년단"
+    ],
+    "members": [
+      "RM|김남준",
+      "진|김석진|JIN",
+      "슈가|민윤기|SUGA",
+      "제이홉|정호석|j-hope",
+      "지민|박지민|JIMIN",
+      "뷔|김태형|V",
+      "정국|전정국|JUNGKOOK"
+    ],
+    "tours": [],
+    "source": "https://ibighit.com/bts/kor/profile/"
+  },
+  {
+    "id": "blackpink",
+    "name": "BLACKPINK",
+    "english": "블랙핑크",
+    "initials": "BP",
+    "kind": "그룹",
+    "aliases": [
+      "BLACKPINK",
+      "블랙핑크"
+    ],
+    "members": [
+      "지수",
+      "제니",
+      "로제",
+      "리사"
+    ],
+    "tours": [
+      "DEADLINE"
+    ],
+    "source": "https://www.ygfamily.com/ko/artists/blackpink/profile"
+  },
+  {
+    "id": "twice",
+    "name": "TWICE",
+    "english": "트와이스",
+    "initials": "TW",
+    "kind": "그룹",
+    "aliases": [
+      "TWICE",
+      "트와이스"
+    ],
+    "members": [
+      "나연",
+      "정연",
+      "모모",
+      "사나",
+      "지효",
+      "미나",
+      "다현",
+      "채영",
+      "쯔위"
+    ],
+    "tours": [],
+    "source": "https://twice.jype.com/profile"
+  },
+  {
+    "id": "straykids",
+    "name": "Stray Kids",
+    "english": "스트레이 키즈",
+    "initials": "SK",
+    "kind": "그룹",
+    "aliases": [
+      "Stray Kids",
+      "스트레이 키즈"
+    ],
+    "members": [
+      "방찬",
+      "리노",
+      "창빈",
+      "현진",
+      "한",
+      "필릭스",
+      "승민",
+      "아이엔"
+    ],
+    "tours": [
+      "dominATE"
+    ],
+    "source": "https://straykids.jype.com/profile"
+  },
+  {
+    "id": "seventeen",
+    "name": "SEVENTEEN",
+    "english": "세븐틴",
+    "initials": "SVT",
+    "kind": "그룹",
+    "aliases": [
+      "SEVENTEEN",
+      "세븐틴"
+    ],
+    "members": [
+      "에스쿱스",
+      "정한",
+      "조슈아",
+      "준",
+      "호시",
+      "원우",
+      "우지",
+      "디에잇",
+      "민규",
+      "도겸",
+      "승관",
+      "버논",
+      "디노"
+    ],
+    "tours": [],
+    "source": "https://www.pledis.co.kr/artist/detail/seventeen/"
+  },
+  {
+    "id": "txt",
+    "name": "TOMORROW X TOGETHER",
+    "english": "투모로우바이투게더",
+    "initials": "TXT",
+    "kind": "그룹",
+    "aliases": [
+      "TOMORROW X TOGETHER",
+      "투모로우바이투게더",
+      "TXT"
+    ],
+    "members": [
+      "수빈",
+      "연준",
+      "범규",
+      "태현",
+      "휴닝카이"
+    ],
+    "tours": [],
+    "source": "https://ibighit.com/txt/kor/profile/"
+  },
+  {
+    "id": "enhypen",
+    "name": "ENHYPEN",
+    "english": "엔하이픈",
+    "initials": "EN",
+    "kind": "그룹",
+    "aliases": [
+      "ENHYPEN",
+      "엔하이픈"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://beliftlab.com/artist/profile/ENHYPEN"
+  },
+  {
+    "id": "le_sserafim",
+    "name": "LE SSERAFIM",
+    "english": "르세라핌",
+    "initials": "LS",
+    "kind": "그룹",
+    "aliases": [
+      "LE SSERAFIM",
+      "르세라핌"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.sourcemusic.com/artist/profile/LE%20SSERAFIM"
+  },
+  {
+    "id": "newjeans",
+    "name": "NewJeans",
+    "english": "뉴진스",
+    "initials": "NJ",
+    "kind": "그룹",
+    "aliases": [
+      "NewJeans",
+      "뉴진스"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://newjeans.kr/"
+  },
+  {
+    "id": "itzy",
+    "name": "ITZY",
+    "english": "있지",
+    "initials": "IT",
+    "kind": "그룹",
+    "aliases": [
+      "ITZY",
+      "있지"
+    ],
+    "members": [
+      "예지",
+      "리아",
+      "류진",
+      "채령",
+      "유나"
+    ],
+    "tours": [],
+    "source": "https://itzy.jype.com/profile"
+  },
+  {
+    "id": "gidle",
+    "name": "i-dle",
+    "english": "아이들",
+    "initials": "ID",
+    "kind": "그룹",
+    "aliases": [
+      "(여자)아이들",
+      "여자아이들",
+      "아이들",
+      "(G)I-DLE",
+      "G I-DLE",
+      "i-dle"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.cubeent.co.kr/"
+  },
+  {
+    "id": "redvelvet",
+    "name": "Red Velvet",
+    "english": "레드벨벳",
+    "initials": "RV",
+    "kind": "그룹",
+    "aliases": [
+      "Red Velvet",
+      "레드벨벳"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.smtown.com/artist"
+  },
+  {
+    "id": "nctdream",
+    "name": "NCT DREAM",
+    "english": "엔시티 드림",
+    "initials": "ND",
+    "kind": "그룹",
+    "aliases": [
+      "NCT DREAM",
+      "엔시티 드림"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.smtown.com/artist"
+  },
+  {
+    "id": "nct127",
+    "name": "NCT 127",
+    "english": "엔시티 127",
+    "initials": "NC",
+    "kind": "그룹",
+    "aliases": [
+      "NCT 127",
+      "엔시티 127"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.smtown.com/artist"
+  },
+  {
+    "id": "shinee",
+    "name": "SHINee",
+    "english": "샤이니",
+    "initials": "SH",
+    "kind": "그룹",
+    "aliases": [
+      "SHINee",
+      "샤이니"
+    ],
+    "members": [
+      "온유",
+      "키",
+      "민호",
+      "태민"
+    ],
+    "tours": [],
+    "source": "https://www.smtown.com/artist"
+  },
+  {
+    "id": "exo",
+    "name": "EXO",
+    "english": "엑소",
+    "initials": "EX",
+    "kind": "그룹",
+    "aliases": [
+      "EXO",
+      "엑소"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.smtown.com/artist"
+  },
+  {
+    "id": "superjunior",
+    "name": "SUPER JUNIOR",
+    "english": "슈퍼주니어",
+    "initials": "SJ",
+    "kind": "그룹",
+    "aliases": [
+      "SUPER JUNIOR",
+      "슈퍼주니어"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.smtown.com/artist"
+  },
+  {
+    "id": "riize",
+    "name": "RIIZE",
+    "english": "라이즈",
+    "initials": "RZ",
+    "kind": "그룹",
+    "aliases": [
+      "RIIZE",
+      "라이즈"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.smtown.com/artist"
+  },
+  {
+    "id": "boynextdoor",
+    "name": "BOYNEXTDOOR",
+    "english": "보이넥스트도어",
+    "initials": "BN",
+    "kind": "그룹",
+    "aliases": [
+      "BOYNEXTDOOR",
+      "보이넥스트도어"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.kozofficial.com/artist/profile/BOYNEXTDOOR"
+  },
+  {
+    "id": "tws",
+    "name": "TWS",
+    "english": "투어스",
+    "initials": "TW",
+    "kind": "그룹",
+    "aliases": [
+      "TWS",
+      "투어스"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.pledis.co.kr/"
+  },
+  {
+    "id": "izone",
+    "name": "IZ*ONE",
+    "english": "아이즈원",
+    "initials": "IZ",
+    "kind": "그룹",
+    "aliases": [
+      "IZ*ONE",
+      "아이즈원"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.universal-music.co.jp/izone/"
+  },
+  {
+    "id": "akmu",
+    "name": "AKMU",
+    "english": "악뮤",
+    "initials": "AK",
+    "kind": "듀오",
+    "aliases": [
+      "AKMU",
+      "악뮤",
+      "악동뮤지션"
+    ],
+    "members": [
+      "이찬혁",
+      "이수현"
+    ],
+    "tours": [],
+    "source": "https://www.ygfamily.com/ko/artists/akmu/profile"
+  },
+  {
+    "id": "bbol4",
+    "name": "볼빨간사춘기",
+    "english": "BOL4",
+    "initials": "B4",
+    "kind": "솔로",
+    "aliases": [
+      "볼빨간사춘기",
+      "BOL4"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.shofar-ent.com/"
+  },
+  {
+    "id": "younha",
+    "name": "윤하",
+    "english": "YOUNHA",
+    "initials": "YH",
+    "kind": "솔로",
+    "aliases": [
+      "윤하",
+      "YOUNHA"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.c9ent.co.kr/"
+  },
+  {
+    "id": "taeyeon",
+    "name": "태연",
+    "english": "TAEYEON",
+    "initials": "TY",
+    "kind": "솔로",
+    "aliases": [
+      "태연",
+      "TAEYEON"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.smtown.com/artist"
+  },
+  {
+    "id": "taemin",
+    "name": "태민",
+    "english": "TAEMIN",
+    "initials": "TM",
+    "kind": "솔로",
+    "aliases": [
+      "태민",
+      "TAEMIN"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.bpm-ent.com/"
+  },
+  {
+    "id": "jhope",
+    "name": "제이홉",
+    "english": "j-hope",
+    "initials": "JH",
+    "kind": "솔로",
+    "aliases": [
+      "제이홉",
+      "j-hope"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://ibighit.com/bts/kor/profile/"
+  },
+  {
+    "id": "jin",
+    "name": "진",
+    "english": "JIN",
+    "initials": "JN",
+    "kind": "솔로",
+    "aliases": [
+      "JIN",
+      "진",
+      "김석진"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://ibighit.com/bts/kor/profile/"
+  },
+  {
+    "id": "gdragon",
+    "name": "G-DRAGON",
+    "english": "지드래곤",
+    "initials": "GD",
+    "kind": "솔로",
+    "aliases": [
+      "G-DRAGON",
+      "지드래곤"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.galaxyuniverse.ai/"
+  },
+  {
+    "id": "baekhyun",
+    "name": "백현",
+    "english": "BAEKHYUN",
+    "initials": "BH",
+    "kind": "솔로",
+    "aliases": [
+      "백현",
+      "BAEKHYUN"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://inb100.com/"
+  },
+  {
+    "id": "limyoungwoong",
+    "name": "임영웅",
+    "english": "LIM YOUNG WOONG",
+    "initials": "YW",
+    "kind": "솔로",
+    "aliases": [
+      "임영웅"
+    ],
+    "members": [],
+    "tours": [
+      "IM HERO"
+    ],
+    "source": "https://www.mulgogimusic.com/"
+  },
+  {
+    "id": "youngtak",
+    "name": "영탁",
+    "english": "YOUNGTAK",
+    "initials": "YT",
+    "kind": "솔로",
+    "aliases": [
+      "영탁",
+      "YOUNGTAK"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.abysscompany.com/"
+  },
+  {
+    "id": "leechanwon",
+    "name": "이찬원",
+    "english": "LEE CHAN WON",
+    "initials": "CW",
+    "kind": "솔로",
+    "aliases": [
+      "이찬원"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.tnent.co.kr/"
+  },
+  {
+    "id": "jannabi",
+    "name": "잔나비",
+    "english": "JANNABI",
+    "initials": "JN",
+    "kind": "밴드",
+    "aliases": [
+      "잔나비",
+      "JANNABI"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.peponimusic.com/"
+  },
+  {
+    "id": "lucy",
+    "name": "LUCY",
+    "english": "루시",
+    "initials": "LC",
+    "kind": "밴드",
+    "aliases": [
+      "LUCY",
+      "루시"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.mystic89.net/"
+  },
+  {
+    "id": "xdinary",
+    "name": "Xdinary Heroes",
+    "english": "엑스디너리 히어로즈",
+    "initials": "XH",
+    "kind": "밴드",
+    "aliases": [
+      "Xdinary Heroes",
+      "엑스디너리 히어로즈"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://xdinaryheroes.jype.com/profile"
+  },
+  {
+    "id": "nell",
+    "name": "NELL",
+    "english": "넬",
+    "initials": "NL",
+    "kind": "밴드",
+    "aliases": [
+      "NELL",
+      "넬"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.spacebohemian.com/"
+  },
+  {
+    "id": "10cm",
+    "name": "10CM",
+    "english": "십센치",
+    "initials": "10",
+    "kind": "솔로",
+    "aliases": [
+      "10CM",
+      "십센치"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.msbsound.com/"
+  },
+  {
+    "id": "sungsi",
+    "name": "성시경",
+    "english": "SUNG SI KYUNG",
+    "initials": "SK",
+    "kind": "솔로",
+    "aliases": [
+      "성시경"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.sungsikyung.com/"
+  },
+  {
+    "id": "parkhyo",
+    "name": "박효신",
+    "english": "PARK HYO SHIN",
+    "initials": "PH",
+    "kind": "솔로",
+    "aliases": [
+      "박효신"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.herbighit.com/"
+  },
+  {
+    "id": "kimdong",
+    "name": "김동률",
+    "english": "KIM DONG RYUL",
+    "initials": "DR",
+    "kind": "솔로",
+    "aliases": [
+      "김동률"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.musicfarm.co.kr/"
+  },
+  {
+    "id": "crush",
+    "name": "Crush",
+    "english": "크러쉬",
+    "initials": "CR",
+    "kind": "솔로",
+    "aliases": [
+      "Crush",
+      "크러쉬"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.pnation.com/artists"
+  },
+  {
+    "id": "heize",
+    "name": "헤이즈",
+    "english": "Heize",
+    "initials": "HZ",
+    "kind": "솔로",
+    "aliases": [
+      "헤이즈",
+      "Heize"
+    ],
+    "members": [],
+    "tours": [],
+    "source": "https://www.pnation.com/artists"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "version": "1.3",
+  "versionCode": 4,
+  "apk": "MyConcert-1.3-debug.apk",
+  "sha256": "E4AD439E69CBD3E402F17E3BFF5A6E72745AC8E269DA4FFCDC742AB720DDCA0D",
+  "unitTests": 40,
+  "pendingIssues": [
+    "QA3-005",
+    "QA3-006"
+  ],
+  "android15Tests": 11,
+  "android9Tests": 11,
+  "font200PercentTests": 1,
+  "liveKopisTests": 1
+}
