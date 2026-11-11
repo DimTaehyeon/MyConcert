@@ -14,8 +14,8 @@ android {
         applicationId = "edu.taehyeon.myconcert"
         minSdk = 24
         targetSdk = 37
-        versionCode = 5
-        versionName = "1.0.0"
+        versionCode = 6
+        versionName = "1.1.0"
 
         val local = Properties().apply {
             rootProject.file("local.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }
@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
+    implementation("org.jsoup:jsoup:1.24.1")
     testImplementation(libs.junit)
     testImplementation("com.google.code.gson:gson:2.12.0")
     androidTestImplementation(libs.androidx.espresso.core)

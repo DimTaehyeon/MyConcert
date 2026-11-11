@@ -130,9 +130,8 @@ class MainActivity : AppCompatActivity() {
             addView(image, FrameLayout.LayoutParams(dp(size), dp(size), Gravity.CENTER))
         }
     }
-    private fun avatar(artist: Artist?, size: Int = 32) = label(artist?.initials ?: "♪", if (size > 40) 14 else 12, true, muted).apply {
-        gravity = Gravity.CENTER; background = rounded(surface, size / 2, null)
-        contentDescription = artist?.name ?: "공연"; layoutParams = LinearLayout.LayoutParams(dp(size), dp(size))
+    private fun avatar(artist: Artist?, size: Int = 32) = ArtistAvatarView(this,artist,size,surface,muted).apply {
+        layoutParams = LinearLayout.LayoutParams(dp(size), dp(size))
     }
     private fun splash() {
         root.removeAllViews(); root.setBackgroundColor(bg)
@@ -371,6 +370,7 @@ class MainActivity : AppCompatActivity() {
             bar.addView(bio, LinearLayout.LayoutParams(0, -2, 1f).apply { leftMargin = dp(12) })
             bar.addView(favoriteButton(artist))
             content.add(bar); space(content, 16)
+            content.add(action("프로필 사진 출처") { open(ArtistProfileParser.searchUrl(artist)) })
             content.add(button("검색 표기 · ${artist.aliases.joinToString(" / ")}") { showSearchInfo(model.catalog.byId(artist.id) ?: artist) }); space(content, 20)
             if(artist.userAdded) {
                 content.add(button("추가한 아티스트 삭제") { confirmDeleteArtist(artist) });space(content,16)

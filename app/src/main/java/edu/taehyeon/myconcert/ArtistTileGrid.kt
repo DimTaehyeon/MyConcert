@@ -9,14 +9,12 @@ import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.view.accessibility.AccessibilityNodeInfo
-import android.util.TypedValue
 import android.widget.Checkable
 import android.widget.CheckBox
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatCheckBox
 import androidx.core.view.ViewCompat
-import androidx.core.widget.TextViewCompat
 import edu.taehyeon.myconcert.data.Artist
 import edu.taehyeon.myconcert.data.ArtistGridLayout
 
@@ -27,7 +25,7 @@ class ArtistTile(context:Context,val artist:Artist,private val palette:ArtistTil
                  selected:Boolean,onToggle:(ArtistTile)->Unit) : LinearLayout(context),Checkable {
     private var checked=false
     private val check=AppCompatCheckBox(context)
-    private val initials=TextView(context)
+    private val portrait=ArtistAvatarView(context,artist,40,palette.surface,palette.muted)
     private val name=TextView(context)
     private fun dp(value:Int)=(value*resources.displayMetrics.density).toInt()
     init {
@@ -36,14 +34,8 @@ class ArtistTile(context:Context,val artist:Artist,private val palette:ArtistTil
         isClickable=true;isFocusable=true;descendantFocusability=FOCUS_BLOCK_DESCENDANTS
         contentDescription="${artist.name}, ${artist.kind}";tag="artist-tile:${artist.id}"
         val head=LinearLayout(context).apply { orientation=HORIZONTAL;gravity=Gravity.CENTER_VERTICAL }
-        initials.apply {
-            text=artist.initials;textSize=14f;gravity=Gravity.CENTER;includeFontPadding=false
-            setSingleLine()
-            setHorizontallyScrolling(false)
-            TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(this,8,14,1,TypedValue.COMPLEX_UNIT_SP)
-            typeface=Typeface.create("sans-serif",Typeface.BOLD);importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
-        }
-        head.addView(initials,LayoutParams(dp(40),dp(40)))
+        portrait.importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
+        head.addView(portrait,LayoutParams(dp(40),dp(40)))
         head.addView(View(context),LayoutParams(0,1,1f))
         check.apply {
             isClickable=false;isFocusable=false;minWidth=0;minHeight=0;setPadding(0,0,0,0)
@@ -72,8 +64,7 @@ class ArtistTile(context:Context,val artist:Artist,private val palette:ArtistTil
             cornerRadius=dp(16).toFloat();setColor(if(value) palette.selectedBackground else palette.background)
             setStroke(dp(if(value)2 else 1),if(value) palette.accent else palette.border)
         }
-        initials.background=GradientDrawable().apply { shape=GradientDrawable.OVAL;setColor(if(value) palette.accent else palette.surface) }
-        initials.setTextColor(if(value) Color.WHITE else palette.muted)
+        portrait.setFallbackColors(if(value) palette.accent else palette.surface,if(value) Color.WHITE else palette.muted)
         name.setTextColor(if(value) palette.accent else palette.ink)
         ViewCompat.setStateDescription(this,if(value) "선택됨" else "선택하지 않음")
         refreshDrawableState()

@@ -1,0 +1,13 @@
+{
+  "version": "1.1.0",
+  "versionCode": 6,
+  "baselineTag": "1.0.0v",
+  "baselineCommit": "71ce291",
+  "apk": "MyConcert-1.1.0-debug.apk",
+  "sha256": "FE9632E124E6DE8B5D7853EAA481A9EF27A48A6A55BEF74A78FCE7C62E8A0573",
+  "verifiedProfiles": 48,
+  "unitTests": 46,
+  "android15Tests": 16,
+  "android9Tests": 16,
+  "profileImageFilesSaved": 0
+}

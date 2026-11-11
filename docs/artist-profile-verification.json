@@ -1,0 +1,390 @@
+{
+  "checkedAt": "2026-11-11T10:04:39.007622+00:00",
+  "profiles": [
+    {
+      "artistId": "ive",
+      "matchedName": "IVE",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F8cbe0117-e458-4d4f-ac5a-22d815bd3326.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%95%84%EC%9D%B4%EB%B8%8C+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "nmixx",
+      "matchedName": "NMIXX",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F8701b4b2-e8ae-43ae-be40-3ecd0c340c2f.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=NMIXX+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "iu",
+      "matchedName": "아이유",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fb9e93747-149a-4cd8-bca5-ae0f830433e7.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%95%84%EC%9D%B4%EC%9C%A0+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "day6",
+      "matchedName": "DAY6",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F2af0b361-f61a-4b85-9cd9-415268ff5de8.png",
+      "sourceUrl": "https://search.naver.com/search.naver?query=DAY6+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "aespa",
+      "matchedName": "에스파",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F16cbb630-2222-436e-9e87-9965b511b349.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=aespa+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "bts",
+      "matchedName": "방탄소년단",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F163e33cd-ab3d-4444-a46a-634f36b54c87.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=BTS+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "blackpink",
+      "matchedName": "BLACKPINK",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F87ca006a-9d5e-430e-b1d8-4f9e48305a70.png",
+      "sourceUrl": "https://search.naver.com/search.naver?query=BLACKPINK+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "twice",
+      "matchedName": "TWICE",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F999fb907-68f2-499d-94cd-6be745a24580.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=TWICE+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "straykids",
+      "matchedName": "Stray Kids",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fa489b8bb-b2ec-49f7-b878-eb788f60faf7.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=Stray+Kids+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "seventeen",
+      "matchedName": "세븐틴",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Ff94044a4-0a9c-486c-a98b-ab7332d93db0.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%84%B8%EB%B8%90%ED%8B%B4+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "txt",
+      "matchedName": "투모로우바이투게더",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Ff9e9e2be-1b2a-45e3-a739-e0c8560e910b.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=TOMORROW+X+TOGETHER+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "enhypen",
+      "matchedName": "엔하이픈",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fb9bb4b27-51f2-4931-83c4-1ac70de6e8a3.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=ENHYPEN+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "le_sserafim",
+      "matchedName": "르세라핌",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fe7168fa6-5e5e-430f-aeb1-438751f619c5.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=LE+SSERAFIM+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "newjeans",
+      "matchedName": "뉴진스",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fadecad5f-d170-4b58-9e0c-583b68c6a3e3.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=NewJeans+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "itzy",
+      "matchedName": "ITZY",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fe47f33ea-7b42-4445-8d3d-fadf97252cb1.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=ITZY+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "gidle",
+      "matchedName": "아이들",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Ff4b7193b-d02d-4aaf-8151-125578814725.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=i-dle+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "redvelvet",
+      "matchedName": "레드벨벳",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F13f7b38f-79a2-499f-8f88-2cc59158fc12.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=Red+Velvet+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "nctdream",
+      "matchedName": "NCT DREAM",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fcdd5f177-67aa-46a5-9f3f-919c1b468b35.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=NCT+DREAM+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "nct127",
+      "matchedName": "NCT 127",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fc64e18f5-c4c7-482e-a979-06897d0f260d.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=NCT+127+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "exo",
+      "matchedName": "EXO",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F0967c437-96dd-4969-bc81-3b4b7b1b1158.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=EXO+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "superjunior",
+      "matchedName": "슈퍼주니어",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F0b48c781-020e-4056-b5f1-6e32a891978f.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=SUPER+JUNIOR+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "riize",
+      "matchedName": "라이즈",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Faeeab185-48d5-405b-aafe-bcae33cb41cb.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=RIIZE+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "boynextdoor",
+      "matchedName": "BOYNEXTDOOR",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F0a31dd2a-eb52-446b-8d30-a68633b6889c.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=BOYNEXTDOOR+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "tws",
+      "matchedName": "TWS",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fcaa8d04b-5d94-4075-9c43-f57376233d9a.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=TWS+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "akmu",
+      "matchedName": "AKMU",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F2a0a91a7-39d8-4aa0-a533-e10b9538ce15.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=AKMU+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "bbol4",
+      "matchedName": "볼빨간사춘기",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fd7a51438-d25c-4aba-9d32-15da9ebfdb46.png",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EB%B3%BC%EB%B9%A8%EA%B0%84%EC%82%AC%EC%B6%98%EA%B8%B0+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "younha",
+      "matchedName": "윤하",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F523a0911-7c5b-4dae-89a7-3471ab35307a.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%9C%A4%ED%95%98+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "taeyeon",
+      "matchedName": "태연",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F8db63163-13ec-46be-acb6-b3d32fa1b976.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%ED%83%9C%EC%97%B0+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "taemin",
+      "matchedName": "태민",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F30dcfd1f-85e4-4071-af4e-4b40ca07b76c.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%ED%83%9C%EB%AF%BC+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "jhope",
+      "matchedName": "제이홉",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F315873ef-f961-45c6-b509-b383dd44946a.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%9D%B4%ED%99%89+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "jin",
+      "matchedName": "진",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F1a6c37e8-88de-46b6-b5ae-16c86a3fa0c8.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%A7%84+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "gdragon",
+      "matchedName": "G-DRAGON",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fbea07c91-3123-4ece-b485-555773d81891.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=G-DRAGON+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "baekhyun",
+      "matchedName": "백현",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F80593e1f-64d8-4615-8227-0a0e6eee75d9.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EB%B0%B1%ED%98%84+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "youngtak",
+      "matchedName": "영탁",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Ft%2F6ba17d66-55b7-48b9-a9df-37fc3889da32.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%98%81%ED%83%81+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "leechanwon",
+      "matchedName": "이찬원",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F4a8d472a-e7ce-4003-aa2d-9df4b21965b7.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%9D%B4%EC%B0%AC%EC%9B%90+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "jannabi",
+      "matchedName": "잔나비",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fd3e4b20b-9c41-4a5d-9e8c-6749a2ca782f.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%9E%94%EB%82%98%EB%B9%84+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "lucy",
+      "matchedName": "LUCY",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F6d846d58-9801-4353-8c26-ce788bcdc6a7.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=LUCY+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "nell",
+      "matchedName": "넬",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F1e5c4247-a8a6-46e4-9810-cf186d659102.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=NELL+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "10cm",
+      "matchedName": "십센치",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F5c299ed9-fcfc-4797-ae65-8d5655f1fe97.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%8B%AD%EC%84%BC%EC%B9%98+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "parkhyo",
+      "matchedName": "박효신",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F50a1601f-258b-40de-b8a3-3aa9fe6f3ce8.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EB%B0%95%ED%9A%A8%EC%8B%A0+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "crush",
+      "matchedName": "크러쉬",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F8ea8b7c3-b477-43e7-b82a-2acdcb59536c.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%ED%81%AC%EB%9F%AC%EC%89%AC+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "heize",
+      "matchedName": "헤이즈",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fb7caeeb3-a5d9-4676-a486-9c0eb37b9d69.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%ED%97%A4%EC%9D%B4%EC%A6%88+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "shinee",
+      "matchedName": "샤이니",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F82%2F201701241713393933.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=SHINee+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "izone",
+      "matchedName": "아이즈원",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=342&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FportraitGroup%2F202012%2F20201202170717689.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=IZ%2AONE+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 342,
+      "height": 228
+    },
+    {
+      "artistId": "limyoungwoong",
+      "matchedName": "임영웅",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2Fportrait%2F202109%2F20210910125309738.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%9E%84%EC%98%81%EC%9B%85+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "xdinary",
+      "matchedName": "Xdinary Heroes",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=210&expire=1&refresh=true&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F33dd7c2d-e384-41dd-a256-f35df140664a.png",
+      "sourceUrl": "https://search.naver.com/search.naver?query=Xdinary+Heroes+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 210,
+      "height": 140
+    },
+    {
+      "artistId": "sungsi",
+      "matchedName": "성시경",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2Fportrait%2F202105%2F20210520175734713.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EC%84%B1%EC%8B%9C%EA%B2%BD+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    },
+    {
+      "artistId": "kimdong",
+      "matchedName": "김동률",
+      "imageUrl": "https://search.pstatic.net/common?type=a&size=264&expire=1&refresh=true&direct=true&quality=100&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2Fportrait%2F202305%2F2023050912425196.jpg",
+      "sourceUrl": "https://search.naver.com/search.naver?query=%EA%B9%80%EB%8F%99%EB%A5%A0+%ED%94%84%EB%A1%9C%ED%95%84",
+      "width": 264,
+      "height": 330
+    }
+  ],
+  "failures": []
+}
