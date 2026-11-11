@@ -5,8 +5,8 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class ArtistGridLayoutTest {
-    @Test fun phonesShowThreeColumnsAndLargeFontsReduceCrowding() {
-        assertEquals(3,ArtistGridLayout.columns(372f,1f))
+    @Test fun phonesShowTwoPhotoColumnsAndLargeFontsReduceCrowding() {
+        assertEquals(2,ArtistGridLayout.columns(372f,1f))
         assertEquals(2,ArtistGridLayout.columns(372f,2f))
         assertEquals(1,ArtistGridLayout.columns(240f,2f))
     }

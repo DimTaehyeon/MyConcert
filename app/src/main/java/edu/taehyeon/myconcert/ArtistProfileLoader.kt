@@ -72,13 +72,13 @@ object ArtistProfileLoader {
 
     private fun decode(url:String):Bitmap?=runCatching {
         if(!ArtistProfileParser.isPhotoUrl(url)) return null
-        val data=fetch(url,2*1024*1024)
+        val data=fetch(ArtistProfileParser.displayImageUrl(url),2*1024*1024)
         val bounds=BitmapFactory.Options().apply { inJustDecodeBounds=true }
         BitmapFactory.decodeByteArray(data,0,data.size,bounds)
         if(bounds.outWidth<=0 || bounds.outHeight<=0) return null
         val options=BitmapFactory.Options().apply {
             inSampleSize=1
-            while(bounds.outWidth/inSampleSize>320 || bounds.outHeight/inSampleSize>320) inSampleSize*=2
+            while(bounds.outWidth/inSampleSize>640 || bounds.outHeight/inSampleSize>640) inSampleSize*=2
         }
         BitmapFactory.decodeByteArray(data,0,data.size,options)
     }.getOrNull()

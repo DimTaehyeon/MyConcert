@@ -42,9 +42,9 @@ class QaDisplayTest {
             scenario.onActivity { activity ->
                 val tiles=all(activity.findViewById(android.R.id.content))
                 val grid=tiles.filterIsInstance<ArtistTileGrid>().single()
-                assertEquals(if(scale>=1.8f) 2 else 3,grid.columns)
+                assertEquals(2,grid.columns)
                 assertTrue(tiles.filterIsInstance<ArtistTile>().first().isChecked)
-                tiles.filterIsInstance<ArtistTile>().flatMap(::all).filterIsInstance<TextView>().filter { it.visibility==View.VISIBLE }.forEach { text ->
+                tiles.filterIsInstance<ArtistTile>().flatMap(::all).filterIsInstance<TextView>().filter { it.visibility==View.VISIBLE && it.text.isNotBlank() }.forEach { text ->
                     assertEquals(text.text.length,text.layout.getLineEnd(text.lineCount-1))
                     assertTrue("${text.text} must fit inside its tile",text.layout.height<=text.height-text.paddingTop-text.paddingBottom)
                     // getLineMax excludes trailing spaces that Android can place beyond the wrap boundary.

@@ -1,0 +1,12 @@
+{
+  "version": "1.2.0",
+  "versionCode": 7,
+  "previousTag": "1.1.0v",
+  "apk": "MyConcert-1.2.0-debug.apk",
+  "sha256": "41676518DC30D6DC65BBAB24D53F153D2FA628BC09D92365C18EF1F7B95CA703",
+  "unitTests": 47,
+  "android15Tests": 16,
+  "android9Tests": 16,
+  "font200Tests": 1,
+  "profileImageFilesSaved": 0
+}

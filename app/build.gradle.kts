@@ -14,8 +14,8 @@ android {
         applicationId = "edu.taehyeon.myconcert"
         minSdk = 24
         targetSdk = 37
-        versionCode = 6
-        versionName = "1.1.0"
+        versionCode = 7
+        versionName = "1.2.0"
 
         val local = Properties().apply {
             rootProject.file("local.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }

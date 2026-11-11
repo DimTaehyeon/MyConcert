@@ -44,7 +44,7 @@ class QaRoundThreeTest {
             scenario.onActivity { activity -> ViewModelProvider(activity)[MyConcertViewModel::class.java].navigate(Route("settings"),false) }
             scenario.onActivity { activity ->
                 val views=all(activity.findViewById(android.R.id.content))
-                assertEquals(3,views.filterIsInstance<ArtistTileGrid>().single().columns)
+                assertEquals(2,views.filterIsInstance<ArtistTileGrid>().single().columns)
                 val tiles=views.filterIsInstance<ArtistTile>()
                 tiles.take(8).forEach { it.performClick() }
                 assertTrue(tiles.take(8).all { it.isChecked })

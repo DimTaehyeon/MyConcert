@@ -1,8 +1,11 @@
 package edu.taehyeon.myconcert
 
 import android.graphics.Bitmap
+import android.graphics.Matrix
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -27,7 +30,7 @@ class ArtistPhotoTest {
     private fun screenshot(name:String) {
         Thread.sleep(450)
         instrumentation.waitForIdleSync()
-        val folder=File(context.getExternalFilesDir(null),"profiles").apply { mkdirs() }
+        val folder=File(context.getExternalFilesDir(null),"photo-tiles").apply { mkdirs() }
         instrumentation.uiAutomation.takeScreenshot().let { bitmap ->
             File(folder,"$name.png").outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG,100,it) };bitmap.recycle()
         }
@@ -56,7 +59,17 @@ class ArtistPhotoTest {
             scenario.onActivity { activity ->
                 val tiles=all(activity.findViewById(android.R.id.content)).filterIsInstance<ArtistTile>()
                 val tile=tiles.first();tile.performClick();assertTrue(tile.isChecked)
-                assertTrue(all(tile).filterIsInstance<ArtistAvatarView>().single().hasPhoto)
+                val portrait=all(tile).filterIsInstance<ArtistAvatarView>().single()
+                assertTrue(portrait.hasPhoto);assertTrue(portrait.tileBackground)
+                assertEquals(0,portrait.left);assertEquals(0,portrait.top)
+                assertEquals(tile.width,portrait.width);assertEquals(tile.height,portrait.height)
+                val capsule=all(tile).filterIsInstance<TextView>().single { it.tag=="artist-name:${tile.artist.id}" }
+                val inset=(10*activity.resources.displayMetrics.density).toInt()
+                assertEquals(tile.width-inset,capsule.right);assertEquals(tile.height-inset,capsule.bottom)
+                assertTrue(capsule.left>=inset)
+                val main=all(portrait).filterIsInstance<ImageView>().single { it.scaleType==ImageView.ScaleType.FIT_CENTER }
+                val matrix=FloatArray(9);main.imageMatrix.getValues(matrix)
+                assertEquals("Artist image must keep its aspect ratio",matrix[Matrix.MSCALE_X],matrix[Matrix.MSCALE_Y],0.001f)
             }
             scenario.recreate()
             screenshot("02-after-recreation")

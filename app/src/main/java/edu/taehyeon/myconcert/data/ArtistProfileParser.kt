@@ -9,6 +9,7 @@ data class ArtistProfilePhoto(val imageUrl:String,val sourceUrl:String,val match
 
 /** Extracts only an exact-name knowledge profile, never news/blog/related-person thumbnails. */
 object ArtistProfileParser {
+    fun displayImageUrl(value:String)=Regex("([?&])size=[^&]*").replace(value) { "${it.groupValues[1]}size=512" }
     fun searchUrl(artist:Artist)= "https://search.naver.com/search.naver?query="+
         URLEncoder.encode("${artist.name} 프로필","UTF-8")
 

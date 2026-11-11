@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Checkable
 import android.widget.CheckBox
-import android.widget.LinearLayout
+import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatCheckBox
 import androidx.core.view.ViewCompat
@@ -22,50 +22,68 @@ data class ArtistTileColors(val background:Int,val selectedBackground:Int,val su
                             val ink:Int,val muted:Int,val border:Int,val accent:Int)
 
 class ArtistTile(context:Context,val artist:Artist,private val palette:ArtistTileColors,
-                 selected:Boolean,onToggle:(ArtistTile)->Unit) : LinearLayout(context),Checkable {
+                 selected:Boolean,onToggle:(ArtistTile)->Unit) : FrameLayout(context),Checkable {
     private var checked=false
     private val check=AppCompatCheckBox(context)
-    private val portrait=ArtistAvatarView(context,artist,40,palette.surface,palette.muted)
+    private val portrait=ArtistAvatarView(context,artist,180,palette.surface,palette.muted,tileBackground=true)
     private val name=TextView(context)
+    private val selectedLabel=TextView(context)
     private fun dp(value:Int)=(value*resources.displayMetrics.density).toInt()
+    private fun rounded(fill:Int,radius:Int)=GradientDrawable().apply { cornerRadius=dp(radius).toFloat();setColor(fill) }
     init {
-        orientation=VERTICAL;gravity=Gravity.CENTER_HORIZONTAL
-        setPadding(dp(12),dp(12),dp(12),dp(12));minimumHeight=dp(132)
+        background=rounded(palette.surface,16);clipToOutline=true
         isClickable=true;isFocusable=true;descendantFocusability=FOCUS_BLOCK_DESCENDANTS
         contentDescription="${artist.name}, ${artist.kind}";tag="artist-tile:${artist.id}"
-        val head=LinearLayout(context).apply { orientation=HORIZONTAL;gravity=Gravity.CENTER_VERTICAL }
         portrait.importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
-        head.addView(portrait,LayoutParams(dp(40),dp(40)))
-        head.addView(View(context),LayoutParams(0,1,1f))
+        addView(portrait,LayoutParams(-1,-1))
+        addView(View(context).apply {
+            background=GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM,intArrayOf(Color.TRANSPARENT,0x80000000.toInt()))
+            importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
+        },LayoutParams(-1,dp(90),Gravity.BOTTOM))
         check.apply {
             isClickable=false;isFocusable=false;minWidth=0;minHeight=0;setPadding(0,0,0,0)
             importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
             buttonTintList=ColorStateList(arrayOf(intArrayOf(android.R.attr.state_checked),intArrayOf(-android.R.attr.state_checked)),intArrayOf(palette.accent,palette.muted))
         }
-        head.addView(check,LayoutParams(dp(30),dp(40)))
-        addView(head,LayoutParams(-1,-2))
-        name.apply {
-            text=artist.name;textSize=14f;gravity=Gravity.CENTER;includeFontPadding=false
-            typeface=Typeface.create("sans-serif",Typeface.BOLD)
-            setLineSpacing(dp(2).toFloat(),1f);importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
+        val checkPlate=FrameLayout(context).apply { background=rounded(Color.WHITE,20) }
+        checkPlate.addView(check,LayoutParams(dp(32),dp(32),Gravity.CENTER))
+        addView(checkPlate,LayoutParams(dp(36),dp(36),Gravity.TOP or Gravity.END).apply { topMargin=dp(10);marginEnd=dp(10) })
+        selectedLabel.apply {
+            text="선택됨";textSize=10f;setTextColor(Color.WHITE);gravity=Gravity.CENTER;includeFontPadding=false
+            typeface=Typeface.create("sans-serif",Typeface.BOLD);setPadding(dp(8),dp(5),dp(8),dp(5))
+            background=rounded(palette.accent,12);importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
         }
-        addView(name,LayoutParams(-1,-2).apply { topMargin=dp(10) })
-        addView(TextView(context).apply {
-            text=if(artist.userAdded) "직접 등록" else artist.kind;textSize=11f;gravity=Gravity.CENTER
-            setTextColor(palette.muted);includeFontPadding=false;importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
-        },LayoutParams(-1,-2).apply { topMargin=dp(6) })
+        addView(selectedLabel,LayoutParams(-2,-2,Gravity.TOP or Gravity.START).apply { topMargin=dp(16);marginStart=dp(10) })
+        name.apply {
+            text=artist.name;textSize=13f;gravity=Gravity.CENTER;includeFontPadding=false
+            typeface=Typeface.create("sans-serif",Typeface.BOLD)
+            setPadding(dp(12),dp(8),dp(12),dp(8));minHeight=dp(32);setTextColor(Color.WHITE)
+            setLineSpacing(dp(2).toFloat(),1f);importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
+            tag="artist-name:${artist.id}"
+        }
+        addView(name,LayoutParams(-2,-2,Gravity.BOTTOM or Gravity.END).apply {
+            bottomMargin=dp(10);marginStart=dp(10);marginEnd=dp(10)
+        })
         setOnClickListener { onToggle(this) };setChecked(selected)
+    }
+    override fun onMeasure(widthMeasureSpec:Int,heightMeasureSpec:Int) {
+        val width=MeasureSpec.getSize(widthMeasureSpec)
+        name.measure(MeasureSpec.makeMeasureSpec((width-dp(20)).coerceAtLeast(1),MeasureSpec.AT_MOST),MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED))
+        val desired=maxOf(dp(148),(width*1.08f).toInt(),name.measuredHeight+dp(82))
+        val height=resolveSize(desired,heightMeasureSpec)
+        super.onMeasure(widthMeasureSpec,MeasureSpec.makeMeasureSpec(height,MeasureSpec.EXACTLY))
     }
     override fun isChecked()=checked
     override fun toggle() { setChecked(!checked) }
     override fun setChecked(value:Boolean) {
         checked=value;isSelected=value;check.isChecked=value
-        background=GradientDrawable().apply {
-            cornerRadius=dp(16).toFloat();setColor(if(value) palette.selectedBackground else palette.background)
-            setStroke(dp(if(value)2 else 1),if(value) palette.accent else palette.border)
+        foreground=GradientDrawable().apply {
+            cornerRadius=dp(16).toFloat();setColor(Color.TRANSPARENT)
+            setStroke(dp(if(value)3 else 1),if(value) palette.accent else palette.border)
         }
-        portrait.setFallbackColors(if(value) palette.accent else palette.surface,if(value) Color.WHITE else palette.muted)
-        name.setTextColor(if(value) palette.accent else palette.ink)
+        portrait.setFallbackColors(palette.surface,palette.muted)
+        name.background=rounded(if(value) palette.accent else 0xE61A2332.toInt(),20)
+        selectedLabel.visibility=if(value) View.VISIBLE else View.GONE
         ViewCompat.setStateDescription(this,if(value) "선택됨" else "선택하지 않음")
         refreshDrawableState()
     }

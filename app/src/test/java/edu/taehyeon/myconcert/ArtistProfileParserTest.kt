@@ -47,4 +47,10 @@ class ArtistProfileParserTest {
         assertEquals(artists,profiles.map { it.asJsonObject["artistId"].asString }.toSet())
         profiles.forEach { assertTrue(it.asJsonObject["artistId"].asString,ArtistProfileParser.isPhotoUrl(it.asJsonObject["imageUrl"].asString)) }
     }
+    @Test fun largerTileImageKeepsTheOriginalPhotoIdentity() {
+        val small="https://search.pstatic.net/common?type=a&size=264&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Five.jpg"
+        val larger=ArtistProfileParser.displayImageUrl(small)
+        assertTrue(larger.contains("size=512"));assertTrue(ArtistProfileParser.isPhotoUrl(larger))
+        assertEquals(small.substringAfter("src="),larger.substringAfter("src="))
+    }
 }
