@@ -1,0 +1,13 @@
+{
+  "version": "1.2.1",
+  "versionCode": 8,
+  "apk": "MyConcert-1.2.1-debug.apk",
+  "sha256": "83553084977933028A12EC3D0603A0C69BF05DC4F9ACC20D27220C65644A7989",
+  "unitTests": 50,
+  "android15Tests": 18,
+  "android9Tests": 18,
+  "font200FooterTests": 1,
+  "figmaScreens": 17,
+  "repository": "https://github.com/DimTaehyeon/MyConcert",
+  "private": true
+}

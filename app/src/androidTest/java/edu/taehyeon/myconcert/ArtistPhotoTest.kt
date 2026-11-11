@@ -13,6 +13,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.action.ViewActions.scrollTo
 import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -30,7 +31,7 @@ class ArtistPhotoTest {
     private fun screenshot(name:String) {
         Thread.sleep(450)
         instrumentation.waitForIdleSync()
-        val folder=File(context.getExternalFilesDir(null),"photo-tiles").apply { mkdirs() }
+        val folder=File(context.getExternalFilesDir(null),"qa121").apply { mkdirs() }
         instrumentation.uiAutomation.takeScreenshot().let { bitmap ->
             File(folder,"$name.png").outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG,100,it) };bitmap.recycle()
         }
@@ -79,21 +80,74 @@ class ArtistPhotoTest {
         context.getSharedPreferences("myconcert",0).edit().clear().putBoolean("onboarded",true).putBoolean("location_prompted",true).commit()
         ActivityScenario.launch(MainActivity::class.java).use { scenario ->
             Thread.sleep(900)
-            lateinit var custom:ArtistAvatarView
+            val customs=mutableListOf<ArtistAvatarView>()
             lateinit var missing:ArtistAvatarView
             scenario.onActivity { activity ->
                 val model=ViewModelProvider(activity)[MyConcertViewModel::class.java]
                 model.navigate(Route("search"),false)
                 val root=activity.findViewById<ViewGroup>(android.R.id.content);root.removeAllViews()
                 val row=android.widget.LinearLayout(activity)
-                custom=ArtistAvatarView(activity,Artist("custom_photo_test","터치드","","터치","직접 검색",listOf("터치드"),userAdded=true),100,-1,0xff111827.toInt())
+                listOf("터치드","ILLIT","아일릿").forEachIndexed { index,name ->
+                    val custom=ArtistAvatarView(activity,Artist("custom_photo_test_$index",name,"",name.take(2),"직접 검색",listOf(name),userAdded=true),100,-1,0xff111827.toInt())
+                    customs+=custom;row.addView(custom,android.widget.LinearLayout.LayoutParams(90,130))
+                }
                 missing=ArtistAvatarView(activity,null,100,-1,0xff111827.toInt())
-                row.addView(custom,android.widget.LinearLayout.LayoutParams(160,160));row.addView(missing,android.widget.LinearLayout.LayoutParams(160,160));root.addView(row)
+                row.addView(missing,android.widget.LinearLayout.LayoutParams(90,130));root.addView(row)
             }
             val before=localFiles()
-            waitUntil { var loaded=false;scenario.onActivity { loaded=custom.hasPhoto };loaded }
+            waitUntil { var loaded=false;scenario.onActivity { loaded=customs.size==3 && customs.all { avatar -> avatar.hasPhoto } };loaded }
             scenario.onActivity { assertFalse(missing.hasPhoto);assertEquals("공연",missing.contentDescription) }
             assertEquals(before,localFiles());screenshot("03-direct-search-photo")
+        }
+    }
+    @Test fun illitPhotoAndCompactTopRightDeleteAppearInActualScreens() {
+        context.getSharedPreferences("myconcert",0).edit().clear().putBoolean("onboarded",true).putBoolean("location_prompted",true).commit()
+        ActivityScenario.launch(MainActivity::class.java).use { scenario ->
+            Thread.sleep(900);var id=""
+            scenario.onActivity { activity ->
+                val model=ViewModelProvider(activity)[MyConcertViewModel::class.java]
+                val artist=model.catalog.beginSearch("ILLIT");id=artist.id;model.toggleFavorite(id)
+                model.preferenceSearchText="ILLIT";model.navigate(Route("settings"),false)
+            }
+            waitUntil {
+                var loaded=false;scenario.onActivity { activity ->
+                    loaded=all(activity.findViewById(android.R.id.content)).filterIsInstance<ArtistAvatarView>().any { it.artist?.id==id && it.hasPhoto }
+                };loaded
+            }
+            screenshot("04-illit-tile")
+            scenario.onActivity { activity ->
+                val model=ViewModelProvider(activity)[MyConcertViewModel::class.java]
+                model.navigate(Route("search"),false);model.route.value=Route("artist",id)
+                model.state.value=LoadState(result=edu.taehyeon.myconcert.data.SearchResult(emptyList()))
+            }
+            onView(withContentDescription("추가한 아티스트 삭제")).check(matches(isDisplayed()))
+            scenario.onActivity { activity ->
+                val views=all(activity.findViewById(android.R.id.content))
+                val delete=views.single { it.contentDescription=="추가한 아티스트 삭제" }
+                val location=IntArray(2);delete.getLocationOnScreen(location)
+                val density=activity.resources.displayMetrics.density
+                assertTrue(location[1]<120*density);assertTrue(delete.width<=72*density)
+                assertTrue(delete.height>=48*density)
+                assertFalse(views.filterIsInstance<TextView>().any { it.text.toString()=="추가한 아티스트 삭제" })
+            }
+            screenshot("05-illit-detail-delete")
+        }
+    }
+    @Test fun footerCreatorCreditIsOneLineAndGithubLinkIsClickable() {
+        context.getSharedPreferences("myconcert",0).edit().clear().putBoolean("onboarded",true).putBoolean("location_prompted",true).commit()
+        ActivityScenario.launch(MainActivity::class.java).use { scenario ->
+            Thread.sleep(900)
+            onView(withText(context.getString(R.string.creator_credit))).perform(scrollTo()).check(matches(isDisplayed()))
+            scenario.onActivity { activity ->
+                val views=all(activity.findViewById(android.R.id.content))
+                val credit=views.filterIsInstance<TextView>().single { it.text.toString()==context.getString(R.string.creator_credit) }
+                assertEquals(1,credit.lineCount);assertFalse(credit.text.contains('\n'))
+                assertEquals(0,credit.layout.getEllipsisCount(0))
+                val github=views.single { it.contentDescription=="GitHub DimTaehyeon 열기" }
+                assertTrue(github.isClickable);assertTrue(github.hasOnClickListeners())
+                assertEquals("https://github.com/DimTaehyeon",context.getString(R.string.creator_github_url))
+            }
+            screenshot("06-footer-github")
         }
     }
 }

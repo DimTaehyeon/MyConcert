@@ -66,8 +66,13 @@ object ArtistProfileLoader {
     }
 
     private fun find(artist:Artist):ArtistProfilePhoto?=runCatching {
-        val source=ArtistProfileParser.searchUrl(artist)
-        ArtistProfileParser.parse(fetch(source,4*1024*1024).toString(Charsets.UTF_8),artist,source)
+        // The overview carries a musician role even when the profile tab omits debut/album fields.
+        for(overview in listOf(false,true)) {
+            val source=ArtistProfileParser.searchUrl(artist,overview)
+            val found=runCatching { ArtistProfileParser.parse(fetch(source,4*1024*1024).toString(Charsets.UTF_8),artist,source) }.getOrNull()
+            if(found!=null) return found
+        }
+        null
     }.getOrNull()
 
     private fun decode(url:String):Bitmap?=runCatching {

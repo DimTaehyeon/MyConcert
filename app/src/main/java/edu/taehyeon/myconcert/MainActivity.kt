@@ -172,7 +172,13 @@ class MainActivity : AppCompatActivity() {
     private fun projectCredits() = column().apply {
         add(View(this@MainActivity).apply { setBackgroundColor(line) },1)
         add(label(getString(R.string.project_credit),11,tint=muted).apply { gravity=Gravity.CENTER },top=20)
-        add(label(getString(R.string.creator_credit),11,tint=muted).apply { gravity=Gravity.CENTER },top=8)
+        add(label(getString(R.string.creator_credit),11,tint=muted).apply {
+            gravity=Gravity.CENTER;setSingleLine();setHorizontallyScrolling(false)
+            androidx.core.widget.TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(this,6,11,1,android.util.TypedValue.COMPLEX_UNIT_SP)
+        },top=8)
+        add(action(getString(R.string.creator_github_label)) { open(getString(R.string.creator_github_url)) }.apply {
+            textSize=11f;contentDescription="GitHub DimTaehyeon 열기"
+        },top=4)
     }
     private fun favoriteButton(artist: Artist): View = AppCompatImageButton(this).apply {
         fun update() {
@@ -360,7 +366,18 @@ class MainActivity : AppCompatActivity() {
     }
     private fun concertList() {
         val route = model.route.value!!; val artist = route.artistId?.let(model.catalog::byId)
-        toolbar(artist?.name ?: if (route.past) "이전 공연 이력" else "예정 공연")
+        val delete=artist?.takeIf { it.userAdded }?.let { added ->
+            FrameLayout(this).apply {
+                contentDescription="추가한 아티스트 삭제";isClickable=true;isFocusable=true
+                layoutParams=LinearLayout.LayoutParams(dp(64),dp(48))
+                setOnClickListener { confirmDeleteArtist(added) }
+                addView(label("삭제",12,true,Color.WHITE).apply {
+                    gravity=Gravity.CENTER;background=rounded(color("#DC2626"),10,null)
+                    importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
+                },FrameLayout.LayoutParams(dp(56),dp(32),Gravity.CENTER))
+            }
+        }
+        toolbar(artist?.name ?: if (route.past) "이전 공연 이력" else "예정 공연",delete)
         if (artist != null) {
             val bar = row(); bar.addView(avatar(artist, 52))
             val bio = column().apply {
@@ -372,9 +389,6 @@ class MainActivity : AppCompatActivity() {
             content.add(bar); space(content, 16)
             content.add(action("프로필 사진 출처") { open(ArtistProfileParser.searchUrl(artist)) })
             content.add(button("검색 표기 · ${artist.aliases.joinToString(" / ")}") { showSearchInfo(model.catalog.byId(artist.id) ?: artist) }); space(content, 20)
-            if(artist.userAdded) {
-                content.add(button("추가한 아티스트 삭제") { confirmDeleteArtist(artist) });space(content,16)
-            }
             tabs(content, listOf("예정 공연", "이전 공연"), if (artistPast) 1 else 0) { artistPast = it == 1; render() }
         }
         val range = row(); range.addView(label("조회 기간", 13, tint = muted), LinearLayout.LayoutParams(0, -2, 1f))

@@ -53,4 +53,25 @@ class ArtistProfileParserTest {
         assertTrue(larger.contains("size=512"));assertTrue(ArtistProfileParser.isPhotoUrl(larger))
         assertEquals(small.substringAfter("src="),larger.substringAfter("src="))
     }
+    private val illit=Artist("custom_illit","ILLIT","직접 검색","IL","직접 검색",listOf("ILLIT"),userAdded=true)
+    private fun overview(role:String="가수",name:String="아일릿",alias:String="ILLIT")="""
+        <div class="api_subject_bx"><div class="_cmTitleArea_hash"><h2 class="_cmTopTitle_hash"><span class="_titleText_hash">$name</span></h2>
+        <div class="_cmTopSubTitle_hash"><span>$alias</span><span>$role</span></div></div>
+        <div class="_cmBasicInfoArea_hash"><div class="_thumbBox_hash"><img src="$photo"></div>
+        <dl><dt>소속사</dt><dd>빌리프랩</dd></dl></div></div>
+    """
+    @Test fun englishSearchAcceptsOfficialKoreanTitleAndEnglishAliasWithoutDebut() {
+        assertEquals("아일릿",ArtistProfileParser.parse(overview(),illit)!!.matchedName)
+        assertNotNull(ArtistProfileParser.parse(overview(),illit.copy(name="아일릿",aliases=listOf("아일릿"))))
+    }
+    @Test fun onlyExplicitOtherNamesCanEstablishProfileIdentity() {
+        val alias=modern(name="아일릿",details="<dl><dt>다른 이름</dt><dd>ILLIT</dd><dt>데뷔</dt><dd>싱글 앨범</dd></dl>")
+        assertNotNull(ArtistProfileParser.parse(alias,illit))
+        val member=modern(name="민주",details="<dl><dt>소속그룹</dt><dd>ILLIT</dd></dl>")
+        assertNull(ArtistProfileParser.parse(member,illit))
+    }
+    @Test fun overviewStillRejectsNonMusiciansAndUnrelatedNames() {
+        assertNull(ArtistProfileParser.parse(overview(role="배우"),illit))
+        assertNull(ArtistProfileParser.parse(overview(name="다른 가수",alias="OTHER"),illit))
+    }
 }

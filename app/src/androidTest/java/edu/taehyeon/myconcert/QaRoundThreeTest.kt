@@ -80,10 +80,10 @@ class QaRoundThreeTest {
                 model.state.value=LoadState(result=SearchResult(emptyList()))
             }
             screenshot("02-zero-results")
-            onView(withText("추가한 아티스트 삭제")).perform(scrollTo(),click())
+            onView(withContentDescription("추가한 아티스트 삭제")).perform(click())
             onView(withText("취소")).perform(click())
             scenario.onActivity { activity -> assertNotNull(ViewModelProvider(activity)[MyConcertViewModel::class.java].catalog.byId(id)) }
-            onView(withText("추가한 아티스트 삭제")).perform(click())
+            onView(withContentDescription("추가한 아티스트 삭제")).perform(click())
             screenshot("03-delete-confirmation")
             onView(withText("삭제")).perform(click())
             onView(withText("아티스트 검색")).check(matches(isDisplayed()))

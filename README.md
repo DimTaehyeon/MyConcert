@@ -2,7 +2,11 @@
 
 공식 버전 관리 기준: 기존 3차 QA 완료본(내부 표기 1.3.1)을 **1.0.0**, Git 태그 **1.0.0v**로 보관합니다. [버전 관리 기록](docs/VERSIONING.md)을 참고하세요.
 
-**현재 버전 1.2.0:** 선호 아티스트를 사진 배경과 오른쪽 아래 이름 캡슐이 있는 타일로 표시합니다. 휴대폰 기본 2열이며, 사진 비율을 유지하고 여백은 같은 사진의 흐린 배경으로 채웁니다. 체크박스·선택 테두리·선택됨 표시를 유지했습니다. 사진 파일은 저장하지 않고 메모리에서만 표시합니다. [새 타일 화면·검증 기록](docs/PHOTO_TILES.md), [사진 조회 구현](docs/ARTIST_PHOTOS.md), 설치 파일 `output/MyConcert-1.2.0-debug.apk`.
+**현재 버전 1.2.1:** 직접 추가한 `ILLIT`·`아일릿`의 프로필 사진을 찾도록 한글·영문 이름 및 네이버 프로필/전체 정보 형식을 보완했습니다. 삭제는 아티스트 화면 오른쪽 위의 작은 빨간 버튼으로 옮겼고, 제작자 크레딧을 한 줄로 표시하며 GitHub 링크를 추가했습니다. [수정·검증 기록](docs/QA_1.2.1.md), 설치 파일 `output/MyConcert-1.2.1-debug.apk`.
+
+저장소: [DimTaehyeon/MyConcert](https://github.com/DimTaehyeon/MyConcert) — **비공개**. 기존 Git 태그와 전체 변경 이력을 함께 관리합니다. [Figma의 현재 앱 화면 17개](https://www.figma.com/design/D7NNqJrQzDyFViSuVjaCfX/MyConcert?node-id=2026-1186)도 편집 가능한 레이어로 갱신했습니다.
+
+선호 타일의 사진 배경·이름 캡슐과 메모리 전용 사진 표시는 유지합니다. [타일 화면](docs/PHOTO_TILES.md), [사진 조회 구현](docs/ARTIST_PHOTOS.md).
 
 좋아하는 아티스트의 예정 공연과 이전 공연을 KOPIS에서 모아보는 Android 앱입니다. 제공된 Figma 시안의 흰 배경, 둥근 카드, 이니셜 아이콘과 원본 로고·아이콘을 반영했습니다. Kotlin과 Android 기본 화면 구성요소를 사용합니다.
 
