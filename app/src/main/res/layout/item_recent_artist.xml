@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/recent_chip" android:layout_width="wrap_content" android:layout_height="48dp" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginEnd="8dp" android:background="@drawable/bg_mc_recent" android:paddingStart="12dp" android:paddingEnd="2dp" android:baselineAligned="false">
+    <TextView android:id="@+id/recent_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Action" android:text="" android:textColor="@color/mc_ink" />
+    <FrameLayout android:id="@+id/remove_recent" android:layout_width="40dp" android:layout_height="48dp" style="@style/Mc.IconButton">
+        <ImageView android:layout_width="14dp" android:layout_height="14dp" style="@style/Mc.Icon" android:src="@drawable/ic_close" android:layout_gravity="center" app:tint="@color/mc_muted" android:contentDescription="@null" />
+    </FrameLayout>
+</LinearLayout>

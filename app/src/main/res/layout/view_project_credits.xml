@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/project_credits" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/mc_line" />
+    <TextView android:id="@+id/project_credit" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/project_credit" android:textSize="11sp" android:gravity="center" android:layout_marginTop="20dp" />
+    <TextView android:id="@+id/creator_credit" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/creator_credit" android:textSize="11sp" android:gravity="center" android:layout_marginTop="8dp" android:scrollHorizontally="false" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="6sp" app:autoSizeMaxTextSize="11sp" app:autoSizeStepGranularity="1sp" android:maxLines="1" />
+    <TextView android:id="@+id/github_link" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Action" android:text="@string/creator_github_label" android:layout_marginTop="4dp" android:textSize="11sp" android:contentDescription="@string/ui_view_project_credits_github_link_contentdescription" />
+</LinearLayout>

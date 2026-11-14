@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/loading_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:padding="24dp">
+    <ProgressBar android:layout_width="32dp" android:layout_height="32dp" android:layout_gravity="center_horizontal" android:indeterminateTint="@color/mc_accent" />
+    <TextView android:id="@+id/loading_progress" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:textSize="13sp" android:layout_marginTop="16dp" />
+    <TextView android:id="@+id/cancel_loading" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Button" android:text="@string/ui_view_loading_cancel_loading_text" android:layout_marginTop="16dp" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen_preferences" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <include layout="@layout/view_toolbar" />
+    <LinearLayout android:id="@+id/onboarding_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="12dp" android:visibility="gone">
+        <ImageView android:layout_width="64dp" android:layout_height="64dp" style="@style/Mc.Icon" android:src="@drawable/brand_logo" android:contentDescription="@string/ui_screen_preferences_3_contentdescription" android:importantForAccessibility="auto" android:layout_marginBottom="24dp" />
+        <TextView android:id="@+id/onboarding_title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Title" android:text="@string/ui_screen_preferences_onboarding_title_text" android:textSize="26sp" />
+    </LinearLayout>
+    <TextView android:id="@+id/preferences_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Muted" android:text="@string/ui_screen_preferences_preferences_subtitle_text" />
+    <include android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="20dp" layout="@layout/view_search_input" />
+    <TextView android:id="@+id/empty_artists" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_screen_preferences_empty_artists_text" android:textSize="13sp" android:layout_marginTop="12dp" android:visibility="gone" />
+    <edu.taehyeon.myconcert.ArtistTileGrid android:id="@+id/artist_grid" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" />
+</LinearLayout>

@@ -143,6 +143,8 @@ class ArtistPhotoTest {
                 val credit=views.filterIsInstance<TextView>().single { it.text.toString()==context.getString(R.string.creator_credit) }
                 assertEquals(1,credit.lineCount);assertFalse(credit.text.contains('\n'))
                 assertEquals(0,credit.layout.getEllipsisCount(0))
+                assertEquals(credit.text.length,credit.layout.getLineEnd(0))
+                assertTrue("Creator credit must fit without clipping",credit.layout.getLineMax(0)<=credit.width-credit.paddingLeft-credit.paddingRight+1)
                 val github=views.single { it.contentDescription=="GitHub DimTaehyeon 열기" }
                 assertTrue(github.isClickable);assertTrue(github.hasOnClickListeners())
                 assertEquals("https://github.com/DimTaehyeon",context.getString(R.string.creator_github_url))

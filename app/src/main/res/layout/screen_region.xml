@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/screen_region" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <include layout="@layout/view_top_header" />
+    <include layout="@layout/view_search_entry" />
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" layout="@layout/view_tabs" />
+    <LinearLayout android:id="@+id/map_panel" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_mc_card" android:padding="16dp" android:layout_marginTop="16dp">
+        <LinearLayout android:id="@+id/map_heading" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
+            <TextView android:id="@+id/map_title" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Mc.Text.Heading" android:text="@string/ui_screen_region_map_title_text" android:layout_weight="1" android:textSize="16sp" />
+            <TextView android:id="@+id/my_location" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Action" android:text="@string/ui_screen_region_my_location_text" />
+        </LinearLayout>
+        <TextView android:id="@+id/map_hint" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_screen_region_map_hint_text" android:textColor="@color/mc_faint" android:layout_marginTop="4dp" />
+        <TextView android:id="@+id/location_status" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:layout_marginTop="8dp" />
+        <edu.taehyeon.myconcert.RegionMapView android:id="@+id/region_map" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/region_heading" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="16dp" android:baselineAligned="false">
+        <TextView android:id="@+id/region_title" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Mc.Text.Heading" android:text="" android:layout_weight="1" tools:text="서울의 예정 공연" />
+        <TextView android:id="@+id/region_range" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Action" android:text="" tools:text="30일 ⌄" />
+    </LinearLayout>
+    <TextView android:id="@+id/region_period" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:layout_marginTop="4dp" tools:text="조회 : 향후 30일 기준" />
+    <TextView android:id="@+id/region_genres" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_screen_region_region_genres_text" android:layout_marginTop="6dp" />
+    <TextView android:id="@+id/combined_region_hint" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_screen_region_combined_region_hint_text" android:layout_marginTop="8dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/data_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="16dp" />
+</LinearLayout>

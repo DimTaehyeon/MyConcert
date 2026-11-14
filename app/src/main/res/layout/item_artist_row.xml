@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/artist_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp" android:background="@drawable/bg_mc_card" android:padding="12dp" android:minHeight="76dp" android:baselineAligned="false">
+    <LinearLayout android:id="@+id/open_artist" android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_weight="1" android:minHeight="52dp" android:clickable="true" android:focusable="true" android:baselineAligned="false">
+        <edu.taehyeon.myconcert.ArtistAvatarView android:id="@+id/row_avatar" android:layout_width="44dp" android:layout_height="44dp" />
+        <LinearLayout android:id="@+id/row_text" android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginStart="12dp" android:layout_marginEnd="4dp">
+            <TextView android:id="@+id/row_name" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:textSize="16sp" android:textStyle="bold" tools:text="아티스트" />
+            <TextView android:id="@+id/row_kind" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:layout_marginTop="4dp" tools:text="그룹" />
+        </LinearLayout>
+        <TextView android:id="@+id/row_open" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_item_artist_row_row_open_text" android:textStyle="bold" android:textColor="@color/mc_accent" />
+        <ImageView android:layout_width="16dp" android:layout_height="16dp" style="@style/Mc.Icon" android:src="@drawable/ic_next" app:tint="@color/mc_accent" android:contentDescription="@null" />
+    </LinearLayout>
+    <FrameLayout android:id="@+id/row_delete" android:layout_width="48dp" android:layout_height="48dp" style="@style/Mc.IconButton" android:visibility="gone">
+        <ImageView android:layout_width="22dp" android:layout_height="22dp" style="@style/Mc.Icon" android:src="@drawable/ic_delete_outline" android:layout_gravity="center" app:tint="@color/mc_muted" android:contentDescription="@null" />
+    </FrameLayout>
+</LinearLayout>

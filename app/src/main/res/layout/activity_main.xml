@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/app_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/mc_background">
+    <FrameLayout android:id="@+id/viewport" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ScrollView android:id="@+id/page_scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:clipToPadding="false">
+            <LinearLayout android:id="@+id/page_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="24dp" android:paddingBottom="104dp" android:paddingStart="20dp" android:paddingEnd="20dp">
+                <LinearLayout android:id="@+id/screen_host" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+                <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" layout="@layout/view_project_credits" />
+            </LinearLayout>
+        </ScrollView>
+        <TextView android:id="@+id/scroll_to_top" android:layout_width="wrap_content" android:layout_height="48dp" style="@style/Mc.Text.Button.Primary" android:text="@string/ui_activity_main_scroll_to_top_text" android:layout_gravity="bottom|end" android:layout_marginEnd="16dp" android:layout_marginBottom="16dp" android:contentDescription="@string/ui_activity_main_scroll_to_top_contentdescription" android:elevation="6dp" android:visibility="gone" />
+        <include android:id="@+id/splash_overlay" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" layout="@layout/screen_splash" />
+    </FrameLayout>
+    <TextView android:id="@+id/selection_done" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Button.Primary" android:text="" android:layout_marginTop="8dp" android:layout_marginBottom="12dp" android:paddingTop="16dp" android:paddingBottom="16dp" android:visibility="gone" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" android:paddingStart="20dp" android:paddingEnd="20dp" />
+</LinearLayout>

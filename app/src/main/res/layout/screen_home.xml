@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen_home" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <include layout="@layout/view_top_header" />
+    <include layout="@layout/view_search_entry" />
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" layout="@layout/view_tabs" />
+    <LinearLayout android:id="@+id/favorites_heading" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp" android:baselineAligned="false">
+        <TextView android:id="@+id/favorites_title" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="@string/ui_screen_home_favorites_title_text" android:layout_weight="1" android:textStyle="bold" />
+        <TextView android:id="@+id/edit_favorites" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Action" android:text="@string/ui_screen_home_edit_favorites_text" />
+    </LinearLayout>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none">
+        <LinearLayout android:id="@+id/favorite_artists" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" />
+    </HorizontalScrollView>
+    <LinearLayout android:id="@+id/data_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="20dp" />
+</LinearLayout>

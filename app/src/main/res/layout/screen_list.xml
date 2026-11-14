@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/screen_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <include layout="@layout/view_toolbar" />
+    <LinearLayout android:id="@+id/range_controls" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp" android:baselineAligned="false">
+        <TextView android:id="@+id/range_label" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_screen_artist_range_label_text" android:layout_weight="1" android:textSize="13sp" />
+        <TextView android:id="@+id/range_select" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Action" android:text="" tools:text="각 30일 ⌄" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/data_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="16dp" />
+</LinearLayout>

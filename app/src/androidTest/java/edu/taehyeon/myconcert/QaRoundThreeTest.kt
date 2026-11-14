@@ -130,7 +130,7 @@ class QaRoundThreeTest {
                 val grid=ArtistTileGrid(large)
                 listOf("투모로우바이투게더","브로콜리너마저","아주 긴 이름의 아티스트 테스트 이름을 끝까지 확인하는 최대 길이의 이름 테스트").forEachIndexed { index,name ->
                     grid.addView(ArtistTile(large,Artist("qa$index",name,"",name.take(2),"그룹",listOf(name)),
-                        ArtistTileColors(-1,0xffedf4ff.toInt(),0xfff9fafb.toInt(),0xff111827.toInt(),0xff6b7280.toInt(),0xffe5e7eb.toInt(),0xff3b82f6.toInt()),index==0) {})
+                        index==0) {})
                 }
                 val width=(372*large.resources.displayMetrics.density).toInt()
                 grid.measure(View.MeasureSpec.makeMeasureSpec(width,View.MeasureSpec.EXACTLY),View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED))

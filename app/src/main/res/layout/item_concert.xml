@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/concert_card" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="12dp" android:background="@drawable/bg_mc_card" android:padding="16dp" android:clickable="true" android:focusable="true">
+    <LinearLayout android:id="@+id/concert_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
+        <edu.taehyeon.myconcert.ArtistAvatarView android:id="@+id/concert_avatar" android:layout_width="32dp" android:layout_height="32dp" />
+        <TextView android:id="@+id/concert_artist" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:layout_weight="1" android:textStyle="bold" android:layout_marginStart="8dp" tools:text="NMIXX" />
+        <TextView android:id="@+id/concert_start" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:textColor="@color/mc_faint" tools:text="2026.11.14" />
+    </LinearLayout>
+    <TextView android:id="@+id/concert_title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp" tools:text="아티스트 공연명" />
+    <TextView android:id="@+id/concert_venue" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Muted" android:text="" android:layout_marginTop="4dp" tools:text="공연장 이름" />
+    <TextView android:id="@+id/concert_end" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:textSize="11sp" android:textColor="@color/mc_faint" android:layout_marginTop="6dp" android:visibility="gone" />
+</LinearLayout>

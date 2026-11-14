@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/concert_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <include android:id="@+id/stale_notice" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:visibility="gone" layout="@layout/view_info" />
+    <TextView android:id="@+id/detail_genre" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/mc_accent" tools:text="대중음악" />
+    <TextView android:id="@+id/detail_title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Title" android:text="" android:layout_marginTop="12dp" tools:text="NMIXX 공연" />
+    <TextView android:id="@+id/detail_period" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Muted" android:text="" android:layout_marginTop="12dp" tools:text="2026.11.14 ~ 2026.11.15" />
+    <TextView android:id="@+id/detail_venue" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="8dp" tools:text="공연장 이름" />
+    <TextView android:id="@+id/detail_address" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:textSize="13sp" android:layout_marginTop="8dp" android:visibility="gone" />
+    <ImageView android:id="@+id/detail_poster" android:layout_width="match_parent" android:layout_height="360dp" android:layout_marginTop="24dp" android:scaleType="fitCenter" android:adjustViewBounds="true" android:background="@drawable/bg_mc_card" android:visibility="gone" android:contentDescription="@null" />
+    <LinearLayout android:id="@+id/detail_fields" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:id="@+id/field_cast" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="24dp">
+            <TextView android:id="@+id/label_cast" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_view_concert_detail_label_cast_text" android:textSize="13sp" android:textStyle="bold" />
+            <TextView android:id="@+id/value_cast" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:textSize="15sp" android:layout_marginTop="8dp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/field_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="24dp">
+            <TextView android:id="@+id/label_time" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_view_concert_detail_label_time_text" android:textSize="13sp" android:textStyle="bold" />
+            <TextView android:id="@+id/value_time" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:textSize="15sp" android:layout_marginTop="8dp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/field_runtime" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="24dp">
+            <TextView android:id="@+id/label_runtime" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_view_concert_detail_label_runtime_text" android:textSize="13sp" android:textStyle="bold" />
+            <TextView android:id="@+id/value_runtime" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:textSize="15sp" android:layout_marginTop="8dp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/field_age" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="24dp">
+            <TextView android:id="@+id/label_age" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_view_concert_detail_label_age_text" android:textSize="13sp" android:textStyle="bold" />
+            <TextView android:id="@+id/value_age" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:textSize="15sp" android:layout_marginTop="8dp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/field_price" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="24dp">
+            <TextView android:id="@+id/label_price" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_view_concert_detail_label_price_text" android:textSize="13sp" android:textStyle="bold" />
+            <TextView android:id="@+id/value_price" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:textSize="15sp" android:layout_marginTop="8dp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/field_area" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="24dp">
+            <TextView android:id="@+id/label_area" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_view_concert_detail_label_area_text" android:textSize="13sp" android:textStyle="bold" />
+            <TextView android:id="@+id/value_area" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:textSize="15sp" android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@+id/add_calendar" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Button" android:text="@string/ui_view_concert_detail_add_calendar_text" android:layout_marginTop="24dp" />
+    <include android:id="@+id/booking_heading" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" layout="@layout/view_section_heading" />
+    <LinearLayout android:id="@+id/booking_links" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+    <TextView android:id="@+id/open_kopis" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Button" android:text="@string/ui_view_concert_detail_open_kopis_text" android:layout_marginTop="12dp" />
+    <TextView android:id="@+id/detail_disclaimer" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_view_concert_detail_detail_disclaimer_text" android:layout_marginTop="20dp" />
+</LinearLayout>

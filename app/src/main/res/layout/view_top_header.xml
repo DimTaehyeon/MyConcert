@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/top_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="24dp" android:baselineAligned="false">
+    <LinearLayout android:id="@+id/brand_heading" android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+        <TextView android:id="@+id/header_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Muted" android:text="" tools:text="선호하는 아티스트 공연 일정 모아보기" />
+        <TextView android:id="@+id/brand_name" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Title" android:text="@string/ui_view_top_header_brand_name_text" android:layout_marginTop="4dp" />
+    </LinearLayout>
+    <FrameLayout android:id="@+id/theme_button" android:layout_width="48dp" android:layout_height="48dp" style="@style/Mc.IconButton" android:background="@drawable/bg_mc_surface">
+        <ImageView android:layout_width="20dp" android:layout_height="20dp" style="@style/Mc.Icon" android:src="@drawable/ic_moon" android:layout_gravity="center" app:tint="@color/mc_muted" android:contentDescription="@null" />
+    </FrameLayout>
+</LinearLayout>

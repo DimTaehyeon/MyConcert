@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/result_meta" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <LinearLayout android:id="@+id/result_count_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
+        <TextView android:id="@+id/result_count" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Mc.Text" android:text="" android:layout_weight="1" android:textStyle="bold" android:textColor="@color/mc_accent" tools:text="전체 3건" />
+        <TextView android:id="@+id/result_sort" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" tools:text="가까운 날짜순" />
+    </LinearLayout>
+    <TextView android:id="@+id/result_period" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:layout_marginTop="6dp" />
+</LinearLayout>

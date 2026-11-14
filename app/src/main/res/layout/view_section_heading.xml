@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/section_heading" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingBottom="12dp">
+    <LinearLayout android:id="@+id/heading_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
+        <TextView android:id="@+id/heading_title" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Mc.Text.Heading" android:text="" android:layout_weight="1" tools:text="예정 공연" />
+        <TextView android:id="@+id/heading_more" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Action" android:text="@string/ui_view_section_heading_heading_more_text" android:visibility="gone" />
+    </LinearLayout>
+    <TextView android:id="@+id/heading_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:layout_marginTop="4dp" android:visibility="gone" />
+</LinearLayout>

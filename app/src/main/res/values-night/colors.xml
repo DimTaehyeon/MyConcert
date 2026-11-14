@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mc_background">#10151F</color>
+    <color name="mc_ink">#F3F4F6</color>
+    <color name="mc_muted">#A4AFC0</color>
+    <color name="mc_faint">#A0AABE</color>
+    <color name="mc_line">#344054</color>
+    <color name="mc_surface">#1B2432</color>
+    <color name="mc_accent">#77A9FF</color>
+    <color name="mc_favorite_surface">#20334E</color>
+    <color name="mc_favorite_border">#48658F</color>
+    <color name="mc_region_ink">#F3F4F6</color>
+    <color name="mc_region_border">#64748B</color>
+    <color name="mc_primary">#3B82F6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

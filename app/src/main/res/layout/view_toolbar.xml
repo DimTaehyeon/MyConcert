@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="24dp" android:baselineAligned="false">
+    <FrameLayout android:id="@+id/back_button" android:layout_width="36dp" android:layout_height="48dp" style="@style/Mc.IconButton" android:contentDescription="@string/ui_view_toolbar_back_button_contentdescription">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp" style="@style/Mc.Icon" android:src="@drawable/ic_back" android:layout_gravity="center" app:tint="@color/mc_muted" android:contentDescription="@null" />
+    </FrameLayout>
+    <TextView android:id="@+id/toolbar_title" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Mc.Text.Title" android:text="" android:layout_weight="1" android:layout_marginStart="4dp" tools:text="공연 상세" />
+    <TextView android:id="@+id/toolbar_action" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Action" android:text="" android:visibility="gone" />
+    <FrameLayout android:id="@+id/delete_artist" android:layout_width="64dp" android:layout_height="48dp" style="@style/Mc.IconButton" android:visibility="gone" android:contentDescription="@string/ui_view_toolbar_delete_artist_contentdescription">
+        <TextView android:id="@+id/delete_label" android:layout_width="56dp" android:layout_height="32dp" style="@style/Mc.Text" android:text="@string/ui_view_toolbar_delete_label_text" android:layout_gravity="center" android:gravity="center" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/bg_mc_delete" android:importantForAccessibility="no" />
+    </FrameLayout>
+</LinearLayout>

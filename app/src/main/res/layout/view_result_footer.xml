@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/result_footer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="20dp">
+    <TextView android:id="@+id/result_source" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="" android:textSize="11sp" android:textColor="@color/mc_faint" />
+    <TextView android:id="@+id/refresh_results" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Button" android:text="@string/ui_view_result_footer_refresh_results_text" android:layout_marginTop="12dp" />
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/alias_editor" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+    <EditText android:id="@+id/aliases_input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/ui_dialog_search_aliases_aliases_input_hint" android:minLines="3" android:inputType="textMultiLine" android:contentDescription="@string/ui_dialog_search_aliases_aliases_input_contentdescription" android:importantForAutofill="no" />
+</LinearLayout>

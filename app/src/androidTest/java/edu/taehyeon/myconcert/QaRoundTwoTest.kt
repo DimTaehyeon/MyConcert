@@ -26,7 +26,7 @@ class QaRoundTwoTest {
         context.getSharedPreferences("myconcert",0).edit().clear().putBoolean("onboarded",true)
             .putBoolean("location_prompted",true).putStringSet("favorites",setOf("nmixx")).commit()
     }
-    private fun show(n:Int)=Concert("QA$n","QA 공연 $n",LocalDate.of(2026,11,13),LocalDate.of(2026,11,13),"QA 공연장",genre="대중음악")
+    private fun show(n:Int)=Concert("QA$n","QA 공연 $n",LocalDate.now(java.time.ZoneId.of("Asia/Seoul")),LocalDate.now(java.time.ZoneId.of("Asia/Seoul")),"QA 공연장",genre="대중음악")
     private fun all(v:View):List<View> = listOf(v)+if(v is ViewGroup) (0 until v.childCount).flatMap { all(v.getChildAt(it)) } else emptyList()
     @Test fun paginationKeepsRefreshBelowEveryExpandedCardAndTopButtonReturnsToStart() {
         ActivityScenario.launch(MainActivity::class.java).use { scenario ->

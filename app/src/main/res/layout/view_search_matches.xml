@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/search_matches" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <TextView android:id="@+id/match_count" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Heading" android:text="" />
+    <TextView android:id="@+id/direct_search" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Button.Primary" android:text="" android:layout_marginTop="16dp" />
+    <TextView android:id="@+id/direct_search_hint" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_view_search_matches_direct_search_hint_text" android:layout_marginTop="8dp" />
+    <LinearLayout android:id="@+id/matched_artists" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+</LinearLayout>

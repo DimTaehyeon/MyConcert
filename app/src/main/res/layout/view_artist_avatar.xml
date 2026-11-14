@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@+id/avatar_backdrop" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:alpha="0.65" android:visibility="gone" android:importantForAccessibility="no" android:contentDescription="@null" />
+    <TextView android:id="@+id/avatar_initials" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/Mc.Text" android:text="" android:gravity="center" android:textStyle="bold" android:scrollHorizontally="false" android:importantForAccessibility="no" android:maxLines="1" />
+    <ImageView android:id="@+id/avatar_photo" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:visibility="gone" android:importantForAccessibility="no" android:contentDescription="@null" />
+</merge>

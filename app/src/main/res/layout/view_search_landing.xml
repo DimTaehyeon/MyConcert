@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/search_landing" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <LinearLayout android:id="@+id/recent_heading" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
+        <TextView android:id="@+id/recent_title" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/Mc.Text.Heading" android:text="@string/ui_view_search_landing_recent_title_text" android:layout_weight="1" />
+        <TextView android:id="@+id/clear_recent" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Mc.Text.Action" android:text="@string/ui_view_search_landing_clear_recent_text" />
+    </LinearLayout>
+    <TextView android:id="@+id/recent_empty" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_view_search_landing_recent_empty_text" android:textSize="13sp" android:textColor="@color/mc_faint" android:layout_marginTop="12dp" />
+    <HorizontalScrollView android:id="@+id/recent_scroll" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:scrollbars="none">
+        <LinearLayout android:id="@+id/recent_chips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" />
+    </HorizontalScrollView>
+    <TextView android:id="@+id/recommended_title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Heading" android:text="@string/ui_view_search_landing_recommended_title_text" android:layout_marginTop="32dp" />
+    <TextView android:id="@+id/recommended_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Caption" android:text="@string/ui_view_search_landing_recommended_subtitle_text" android:textSize="13sp" android:layout_marginTop="6dp" />
+    <LinearLayout android:id="@+id/recommended_artists" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+    <LinearLayout android:id="@+id/saved_section" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="28dp">
+        <TextView android:id="@+id/saved_title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Mc.Text.Heading" android:text="@string/ui_view_search_landing_saved_title_text" />
+        <LinearLayout android:id="@+id/saved_artists" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+    </LinearLayout>
+    <include android:id="@+id/direct_search_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" layout="@layout/view_info" />
+</LinearLayout>

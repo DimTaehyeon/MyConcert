@@ -1,13 +1,14 @@
 package edu.taehyeon.myconcert
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.util.AttributeSet
+import android.view.LayoutInflater
+import androidx.core.content.ContextCompat
 import android.graphics.Bitmap
 import android.graphics.Rect
-import android.graphics.Typeface
-import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.BitmapDrawable
 import android.util.TypedValue
-import android.view.Gravity
 import android.view.View
 import android.view.ViewTreeObserver
 import android.widget.FrameLayout
@@ -16,40 +17,47 @@ import android.widget.TextView
 import androidx.core.widget.TextViewCompat
 import edu.taehyeon.myconcert.data.Artist
 
-class ArtistAvatarView(context:Context,val artist:Artist?,size:Int,fill:Int,ink:Int,
-                       val tileBackground:Boolean=false):FrameLayout(context) {
-    private val initials=TextView(context).apply {
-        text=artist?.initials ?: "♪";gravity=Gravity.CENTER;includeFontPadding=false
-        typeface=Typeface.create("sans-serif",Typeface.BOLD);setSingleLine();setHorizontallyScrolling(false)
-        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(this,8,if(tileBackground)36 else if(size>40)14 else 12,1,TypedValue.COMPLEX_UNIT_SP)
-        importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
+/** XML owns the image layers; this view handles binding and memory-only photo loading. */
+class ArtistAvatarView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout(context, attrs) {
+    var artist: Artist? = null
+        private set
+    var tileBackground = false
+        private set
+    private val initials: TextView
+    private val photo: ImageView
+    private val backdrop: ImageView
+    init {
+        LayoutInflater.from(context).inflate(R.layout.view_artist_avatar, this, true)
+        initials = findViewById(R.id.avatar_initials)
+        photo = findViewById(R.id.avatar_photo)
+        backdrop = findViewById(R.id.avatar_backdrop)
+        clipToOutline = true
+        bind(null)
     }
-    private val photo=ImageView(context).apply {
-        scaleType=if(tileBackground || artist?.kind in listOf("그룹","밴드","직접 등록","직접 검색")) ImageView.ScaleType.FIT_CENTER else ImageView.ScaleType.CENTER_CROP
-        visibility=GONE;importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
-    }
-    private val backdrop=ImageView(context).apply {
-        scaleType=ImageView.ScaleType.CENTER_CROP;alpha=0.65f
-        visibility=GONE;importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
+    constructor(context: Context, artist: Artist?, size: Int, fill: Int, ink: Int, tileBackground: Boolean = false) : this(context) {
+        bind(artist, tileBackground, size); setFallbackColors(fill, ink)
     }
     internal var photoRequestKey:String?=null
     val hasPhoto:Boolean get()=photo.drawable!=null && photo.visibility==VISIBLE
     private var requested=false
     private val visible=Rect()
     private val scrollListener=ViewTreeObserver.OnScrollChangedListener { loadIfVisible() }
-    init {
-        contentDescription=artist?.name ?: "공연"
-        clipToOutline=true
-        if(tileBackground) addView(backdrop,LayoutParams(-1,-1))
-        addView(initials,LayoutParams(-1,-1));addView(photo,LayoutParams(-1,-1))
-        setFallbackColors(fill,ink)
+    fun bind(artist: Artist?, tileBackground: Boolean = false, size: Int = 0) {
+        this.artist = artist; this.tileBackground = tileBackground
+        requested = false; photoRequestKey = null
+        photo.setImageDrawable(null); photo.visibility = GONE
+        backdrop.setImageDrawable(null); backdrop.visibility = GONE
+        initials.text = artist?.initials ?: "♪"; initials.visibility = VISIBLE
+        val avatarSize = if (size > 0) size else ((layoutParams?.width ?: 0) / resources.displayMetrics.density).toInt()
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(initials, 8, if (tileBackground) 36 else if (avatarSize > 40) 14 else 12, 1, TypedValue.COMPLEX_UNIT_SP)
+        photo.scaleType = if (tileBackground || artist?.kind in listOf("그룹", "밴드", "직접 등록", "직접 검색")) ImageView.ScaleType.FIT_CENTER else ImageView.ScaleType.CENTER_CROP
+        contentDescription = artist?.name ?: "공연"
+        setFallbackColors(ContextCompat.getColor(context, R.color.mc_surface), ContextCompat.getColor(context, R.color.mc_muted))
+        post { loadIfVisible() }
     }
-    fun setFallbackColors(fill:Int,ink:Int) {
-        background=GradientDrawable().apply {
-            shape=if(tileBackground) GradientDrawable.RECTANGLE else GradientDrawable.OVAL
-            if(tileBackground) cornerRadius=16*resources.displayMetrics.density
-            setColor(fill)
-        }
+    fun setFallbackColors(fill: Int, ink: Int) {
+        setBackgroundResource(if (tileBackground) R.drawable.bg_mc_tile else R.drawable.bg_mc_avatar)
+        backgroundTintList = ColorStateList.valueOf(fill)
         initials.setTextColor(ink)
     }
     internal fun showPhoto(bitmap:Bitmap) {
@@ -64,7 +72,7 @@ class ArtistAvatarView(context:Context,val artist:Artist?,size:Int,fill:Int,ink:
     }
     private fun loadIfVisible() {
         if(!requested && artist!=null && isAttachedToWindow && isShown && getGlobalVisibleRect(visible)) {
-            requested=true;ArtistProfileLoader.load(artist,this)
+            requested=true;ArtistProfileLoader.load(artist!!,this)
         }
     }
     override fun onAttachedToWindow() {

@@ -3,39 +3,33 @@ package edu.taehyeon.myconcert
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.graphics.Typeface
-import android.graphics.drawable.GradientDrawable
-import android.view.Gravity
 import android.widget.FrameLayout
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.appcompat.widget.AppCompatTextView
 import edu.taehyeon.myconcert.data.*
 
 /** The bitmap, province pins and leader lines all share the same image transform. */
-class RegionMapView(context: Context, private val selected: String, private val dark: Boolean,
-                    private val onSelect: (Region) -> Unit) : FrameLayout(context) {
+class RegionMapView @JvmOverloads constructor(context: Context, attrs: android.util.AttributeSet? = null) : FrameLayout(context, attrs) {
+    private var selected = "11"
+    private var dark = false
+    private var onSelect: (Region) -> Unit = {}
+    constructor(context: Context, selected: String, dark: Boolean, onSelect: (Region) -> Unit) : this(context) { bind(selected, dark, onSelect) }
     private val image=AppCompatResources.getDrawable(context,R.drawable.korea_map)!!
     private val paint=Paint(Paint.ANTI_ALIAS_FLAG)
-    private val blue=android.graphics.Color.parseColor(if(dark) "#77A9FF" else "#3B82F6")
-    private val border=android.graphics.Color.parseColor(if(dark) "#64748B" else "#B9C8DC")
+    private val blue get()=android.graphics.Color.parseColor(if(dark) "#77A9FF" else "#3B82F6")
+    private val border get()=android.graphics.Color.parseColor(if(dark) "#64748B" else "#B9C8DC")
     private val density=resources.displayMetrics.density
-    init {
-        setWillNotDraw(false)
+    init { setWillNotDraw(false) }
+    fun bind(selected: String, dark: Boolean, onSelect: (Region) -> Unit) {
+        this.selected = selected; this.dark = dark; this.onSelect = onSelect
+        removeAllViews()
         Regions.all.forEach { region ->
-            val active=region.code==selected
-            addView(AppCompatTextView(context).apply {
-                text=region.name; textSize=11f; gravity=Gravity.CENTER;includeFontPadding=false
-                typeface=Typeface.create("sans-serif",Typeface.BOLD)
-                setTextColor(if(active) android.graphics.Color.WHITE else android.graphics.Color.parseColor(if(dark) "#F3F4F6" else "#243247"))
-                background=GradientDrawable().apply {
-                    shape=GradientDrawable.OVAL
-                    setColor(if(active) android.graphics.Color.parseColor("#3B82F6") else android.graphics.Color.parseColor(if(dark) "#1B2432" else "#FFFFFF"))
-                    setStroke((density*1.2f).toInt().coerceAtLeast(1),if(active) blue else border)
-                }
-                contentDescription="${region.name} 공연 조회"; isFocusable=true;isSelected=active
-                setOnClickListener { onSelect(region) }
-            })
+            val pin = android.view.LayoutInflater.from(context).inflate(R.layout.item_region_pin, this, false) as android.widget.TextView
+            pin.text = region.name; pin.isSelected = region.code == selected
+            pin.contentDescription = "${region.name} 공연 조회"
+            pin.setOnClickListener { onSelect(region) }
+            addView(pin)
         }
+        requestLayout(); invalidate()
     }
     override fun onMeasure(widthMeasureSpec: Int,heightMeasureSpec: Int) {
         val w=MeasureSpec.getSize(widthMeasureSpec)

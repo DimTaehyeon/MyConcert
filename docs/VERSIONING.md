@@ -4,6 +4,7 @@
 - **1.1.0 / 태그 `1.1.0v`**: 네이버 아티스트 프로필 사진을 메모리에서만 표시합니다. `feature/artist-profile-photos` 브랜치에서 구현·검증한 뒤 `main`에 반영합니다. Android versionCode 6.
 - **1.2.0 / 태그 `1.2.0v`**: 선호 아티스트 사진을 타일 배경에 넣고 오른쪽 아래 이름 캡슐을 표시합니다. 휴대폰 기본 2열, 원본 비율·단체 사진 보존, 선택 체크·테두리·선택됨 표시. `feature/artist-photo-tiles` 브랜치에서 검증 후 `main` 반영. Android versionCode 7.
 - **1.2.1 / 태그 `1.2.1v`**: 아일릿 한글·영문 프로필 조회 보완, 우측 상단 빨간 삭제 버튼, 제작자 크레딧 한 줄과 GitHub 링크. Figma 17개 화면 동기화. Android versionCode 8.
+- **1.3.0 / 태그 `1.3.0v`**: 화면·공통 UI를 XML 39개로 분리, 상세 저장 안내 간격 추가, 매칭 안내박스 제거. 기존 데이터 유지 업데이트와 Android 9·15 회귀 검증. Android versionCode 9.
 - API 키와 PC 설정(`local.properties`), 빌드 결과·APK는 저장소에서 제외합니다. APK는 로컬 `output` 폴더에 보관합니다.
 - 원격 저장소: [DimTaehyeon/MyConcert](https://github.com/DimTaehyeon/MyConcert), 사용자 요청에 따라 **비공개**로 생성했습니다. `main`과 버전 태그를 함께 업로드합니다. API 키·APK·PC 설정은 업로드하지 않습니다.
 

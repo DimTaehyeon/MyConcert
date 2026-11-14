@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/search_input" android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_mc_search" android:paddingStart="16dp" android:paddingEnd="8dp" android:baselineAligned="false">
+    <ImageView android:layout_width="20dp" android:layout_height="20dp" style="@style/Mc.Icon" android:src="@drawable/ic_search_blue" app:tint="@color/mc_accent" android:contentDescription="@null" />
+    <EditText android:id="@+id/search_field" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:singleLine="true" android:inputType="text" android:imeOptions="actionSearch" android:textSize="14sp" android:textColor="@color/mc_ink" android:textColorHint="@color/mc_faint" android:background="@null" android:paddingTop="0dp" android:paddingBottom="0dp" android:importantForAutofill="no" android:hint="@string/ui_view_search_input_hint" android:paddingStart="12dp" android:paddingEnd="0dp" />
+    <FrameLayout android:id="@+id/clear_search" android:layout_width="40dp" android:layout_height="48dp" style="@style/Mc.IconButton" android:contentDescription="@string/ui_view_search_input_clear_search_contentdescription">
+        <ImageView android:layout_width="14dp" android:layout_height="14dp" style="@style/Mc.Icon" android:src="@drawable/ic_close" android:layout_gravity="center" app:tint="@color/mc_muted" android:contentDescription="@null" />
+    </FrameLayout>
+</LinearLayout>
