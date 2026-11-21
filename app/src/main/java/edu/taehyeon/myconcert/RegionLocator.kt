@@ -17,7 +17,6 @@ import edu.taehyeon.myconcert.data.Regions
 import java.util.Locale
 import java.util.concurrent.Executors
 
-/** Foreground one-shot location. Coordinates are neither stored nor sent to KOPIS. */
 class RegionLocator(context: Context) {
     private val app=context.applicationContext
     private val manager=app.getSystemService(Context.LOCATION_SERVICE) as LocationManager

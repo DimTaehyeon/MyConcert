@@ -17,7 +17,6 @@ import android.widget.TextView
 import androidx.core.widget.TextViewCompat
 import edu.taehyeon.myconcert.data.Artist
 
-/** XML owns the image layers; this view handles binding and memory-only photo loading. */
 class ArtistAvatarView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout(context, attrs) {
     var artist: Artist? = null
         private set

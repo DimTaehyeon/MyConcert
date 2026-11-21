@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MyConcert</string>
     <string name="project_credit">백석대학교 스마트폰프로그래밍\n기말프로젝트의 일환으로 제작되었습니다.</string>
-    <string name="creator_credit">제작 · 첨단IT학부 빅데이터전공 20223468 김태현</string>
+    <string name="creator_credit">기획·제작 : 첨단IT학부 빅데이터전공 20223468 김태현</string>
     <string name="creator_github_label">github.com/DimTaehyeon ↗</string>
     <string name="creator_github_url">https://github.com/DimTaehyeon</string>
 </resources>

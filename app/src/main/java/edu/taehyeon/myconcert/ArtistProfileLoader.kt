@@ -14,7 +14,6 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.util.concurrent.Executors
 
-/** Remote photos and resolved profile metadata live in RAM only; no file or HTTP disk cache. */
 object ArtistProfileLoader {
     private val executor=Executors.newFixedThreadPool(3)
     private val main=Handler(Looper.getMainLooper())

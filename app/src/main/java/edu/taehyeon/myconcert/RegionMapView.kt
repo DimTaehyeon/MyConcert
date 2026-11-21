@@ -7,7 +7,6 @@ import android.widget.FrameLayout
 import androidx.appcompat.content.res.AppCompatResources
 import edu.taehyeon.myconcert.data.*
 
-/** The bitmap, province pins and leader lines all share the same image transform. */
 class RegionMapView @JvmOverloads constructor(context: Context, attrs: android.util.AttributeSet? = null) : FrameLayout(context, attrs) {
     private var selected = "11"
     private var dark = false
